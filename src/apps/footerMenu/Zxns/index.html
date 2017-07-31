@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>招贤纳士</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>招贤纳士</h1>
+              <h3>不论你来自BAT，还是草根，还是在校大学生<br>
+              只要你技术过硬，能力够棒，31会议，就有你的舞台！</h3>
+              <a href="mailto:liujing@31huiyi.com">快来加入我们</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-title">诚聘岗位</div>
+              <div class="position">
+                <div class="position-left">
+                  <div class="sell">
+                    <div class="sell-content">
+                      <div class="sell-title">
+                        <h3><img src="../../../images/footerMenu/Zxns/zxns-icon1.png" alt="">大客户销售</h3>
+                        <p>工作地点：北京、上海、广州、深圳、珠海、厦门、青岛、天津、武汉、长沙、郑州、西安、重庆、成都等地</p>
+                        <div class="glyphicon" v-bind:class="[iconShow.sellShow,iconShow.sellHide]" @click="iconChange('sell')"></div>
+                      </div>
+                      <div v-if="introduceShow.sell" class="sell-introduce">
+                        <div class="sell-describe">
+                          <div class="sell-describe-title">职位描述：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、负责公司SAAS软件产品的销售，维护原有客户关系并拓展新的销售商机；</li>
+                              <li>2、定期拜访客户，搜集有效信息并分析客户需求，提出解决方案；</li>
+                              <li>3、参与商务谈判、合同签订，顺利实施以及协助售后服务；</li>
+                              <li>4、完成销售业绩考核，达成团队销售额、回款等目标；</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="require sell-describe">
+                          <div class="sell-describe-title">职位要求：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、本科及以上学历，2年以上软件（OA/ERP/CRM/eHR/SAAS等等）销售经验；</li>
+                              <li>2、良好的沟通技巧，深入挖掘客户信息，具备娴熟的商务谈判能力；</li>
+                              <li>3、在某一行业或地区或垂直领域有良好的人脉关系者优先；</li>
+                              <li>4、熟练运用PPT等办公工具制作方案，搭建demo及现场演示；</li>
+                              <li>5、工作积极主动，习惯团队合作，勤奋、踏实、有韧性。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sell">
+                    <div class="sell-content">
+                      <div class="sell-title">
+                        <h3><img src="../../../images/footerMenu/Zxns/zxns-icon2.png" alt="">产品经理（偏互动游戏）</h3>
+                        <p>工作地点：上海</p>
+                        <div class="glyphicon" v-bind:class="[iconShow.productShow,iconShow.productHide]" @click="iconChange('product')"></div>
+                      </div>
+                      <div v-if="introduceShow.product" class="sell-introduce">
+                        <div class="sell-describe">
+                          <div class="sell-describe-title">职位描述：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、协助公司互动产品的策划，有互动、游戏类产品规划经验者佳；</li>
+                              <li>2、通过产品调研、数据分析、竞品跟踪，深入了解用户需求；</li>
+                              <li>3、依据需求策划，设计产品原型，撰写需求文档；</li>
+                              <li>4、对产品数据进行跟踪与研究，分析运营效果，并优化运营策略。</li>
+                              <li>5、定期进行市场分析、竞品分析和用户研究，为产品改进提供指导。</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="require sell-describe">
+                          <div class="sell-describe-title">职位要求：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、统招本科以上学历，有小游戏产品经理优先；</li>
+                              <li>2、1年以上的产品经理工作经验，有独立、完整规划产品的工作经验，</li>
+                              <li>3、信息收集、数据分析能力扎实，能较好地从数据中总结问题；</li>
+                              <li>4、具有严密的逻辑思维能力和细致的观察力，有自己的审美情趣；</li>
+                              <li>5、关注互联网业界资讯和生态，思维活跃，具有良好的团队合作精神。 </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sell">
+                    <div class="sell-content">
+                      <div class="sell-title">
+                        <h3><img src="../../../images/footerMenu/Zxns/zxns-icon3.png" alt="">售前工程师</h3>
+                        <p>工作地点：上海、深圳</p>
+                        <div class="glyphicon" v-bind:class="[iconShow.preSaleShow,iconShow.preSaleHide]" @click="iconChange('preSale')"></div>
+                      </div>
+                      <div v-if="introduceShow.preSale" class="sell-introduce">
+                        <div class="sell-describe">
+                          <div class="sell-describe-title">岗位职责：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、具体负责软件类项目前期的售前支持工作，内容包括用户技术交流与引导、需求调研、PPT讲解、产品演示、项目解决方案编写等；</li>
+                              <li>2、参加具体项目投标工作，包括投标技术方案及报价编写、规范书的应答、方案的澄清和讲标等；</li>
+                              <li>3、定时整理、编写行业用户解决方案及具有企业特色的专业领域解决方案；</li>
+                              <li>4、收集、分析行业动态、竞争对手信息及客户需求的反馈，精通业务，保持对产品的持续跟踪和前瞻性研究；</li>
+                              <li>5、与业务人员及时沟通，了解项目进展及用户反馈；</li>
+                              <li>6、尽职尽责、积极主动完成领导交办的各项任务。</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="require sell-describe">
+                          <div class="sell-describe-title">职位要求：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、计算机、管理、或市场营销相关专业，本科或以上学历；</li>
+                              <li>2、三年左右的软件类售前相关工作经验；</li>
+                              <li>3、必须熟悉数据库、服务器、软件开发等方面的知识，但不要求会写程序；</li>
+                              <li>4、有良好的沟通能力和表达能力，优秀的计划、执行、协调能力；</li>
+                              <li>5、具备良好的团队、创新精神，熟识软件工程规范和各种软件解决方案，本科以上学历。 </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sell">
+                    <div class="sell-content">
+                      <div class="sell-title">
+                        <h3><img src="../../../images/footerMenu/Zxns/zxns-icon4.png" alt="">资深交互设计</h3>
+                        <p>工作地点：上海</p>
+                        <div class="glyphicon" v-bind:class="[iconShow.interactiveShow,iconShow.interactiveHide]" @click="iconChange('interactive')"></div>
+                      </div>
+                      <div v-if="introduceShow.interactive" class="sell-introduce">
+                        <div class="sell-describe">
+                          <div class="sell-describe-title">岗位职责：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、根据产品需求分析并设计产品的web页面的交互结构、用户操作流程，输出产品流程图、线框图等；</li>
+                              <li>2、参与产品设计过程、分析、分解规划交互需求，并给出产品的原型设计方案；</li>
+                              <li>3、辅助产品经理进行各种产品的易用性和功能分析，进行用户体验研究；</li>
+                              <li>4、对产品持续进行设计优化，提升用户体验，提高产品易用性。</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="require sell-describe">
+                          <div class="sell-describe-title">任职资格：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、三年以上纯交互/UE设计工作经验，大型互联网公司/团队工作背景优先；</li>
+                              <li>2、统招本科以上学历，设计类等相关专业优先；</li>
+                              <li>3、对交互设计有较深的理解和大量的实践，可以熟练使用Axure,Visio等产品原型设计软件独立完成整个设计过程；</li>
+                              <li>4、对工作积极主动，有持续的热情和责任心，对设计品质有执着追求，善于团队合作，具备良好的沟通协调能力。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="sell">
+                    <div class="sell-content">
+                      <div class="sell-title">
+                        <h3><img src="../../../images/footerMenu/Zxns/zxns-icon5.png" alt="">采购经理</h3>
+                        <p>工作地点：上海</p>
+                        <div class="glyphicon" v-bind:class="[iconShow.buyShow,iconShow.buyHide]" @click="iconChange('buy')"></div>
+                      </div>
+                      <div v-if="introduceShow.buy" class="sell-introduce">
+                        <div class="sell-describe">
+                          <div class="sell-describe-title">岗位职责：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、负责安排采购范围内的采购任务，控制采购成本；</li>
+                              <li>2、提供书面报价资料，询价、议价、比价并建议采购；</li>
+                              <li>3、在现有供应商的基础上，开发优质供应商，建立与供应商的良好合作关系，定期进行评估； （主要是硬件设备的采购、软件外包商的采购、以及一些市场活动成品物料的采购）</li>
+                              <li>4、建立相关紧急补货方案，确保供应不间断；</li>
+                              <li>5、负责合同相关资料的整理、汇总及归档</li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="require sell-describe">
+                          <div class="sell-describe-title">职位要求：</div>
+                          <div class="sell-describe-content">
+                            <ul>
+                              <li>1、统招本科学历；</li>
+                              <li>2、有IT/软件类采购经验的优先；</li>
+                              <li>3、2-3年左右采购工作经验；</li>
+                              <li>4、具有强烈的责任感和公司使命感，工作细致认真，思维敏捷，具有较强的团队合作精神；</li>
+                              <li>5、有良好的职业道德和素养，能承受一定工作压力， 能够自觉维护公司利益。</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="position-right">
+                  <h4>联系我们</h4>
+                  <p>简历投递：liujing@31huiyi.com</p>
+                </div>
+
+                <div class="clearfix"></div>
+              </div>
+
+              <div class="salary">
+                <div class="salary-content">
+                  <div class="salary-title">
+                    薪酬福利
+                  </div>
+                  <div class="salary-list">
+                    <ul>
+                      <li>铁定薪酬：<span>月度工资，与绩效无挂钩</span></li>
+                      <li>年终奖金：<span>你的成果决定年终奖金的大小</span></li>
+                      <li>保障计划：<span>五险一金妥妥的、带薪年假</span></li>
+                      <li>爱心福利：<span>餐补/加班餐补、通讯补贴、生日礼物、节日礼物、零食饮料、各种好玩的趴</span></li>
+                      <li>特别项目：<span>员工乔迁、结婚、生子均有喜事红包</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="promotion">
+                <div class="promotion-content">
+                  <div class="promotion-title">
+                    晋升机会
+                  </div>
+                  <div class="promotion-list">
+                    <p>完善的成长通道： 专业路线和管理路线双向发展通道。技术路线的高级别职位薪酬可等同高管<br>
+                      内部转岗： 提供各种内部转岗、跨部门晋升机会<br>
+                      完备的培训体系： 新人班、岗位特训班、技能提升班、外训计划</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="team">
+                <div class="team-content">
+                  <div class="team-title">
+                    31团队
+                  </div>
+                  <div class="team-img">
+                    <ul>
+                      <li><img src="../../../images/footerMenu/Zxns/party1.jpg" alt=""></li>
+                      <li><img src="../../../images/footerMenu/Zxns/party2.jpg" alt=""></li>
+                      <li><img src="../../../images/footerMenu/Zxns/party3.jpg" alt=""></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            </div>   
+
+            <div class="join">
+              <div class="join-content">
+                <h3>你还在等什么？</h3>
+                <a href="mailto:liujing@31huiyi.com">赶快加入我们吧 ></a>
+                <p>简历投递：liujing@31huiyi.com</p>
+              </div>
+            </div>
+
+          </div>
+
+          
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

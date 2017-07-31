@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>抽奖</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>疯狂抽奖</h1>
+              <h3>互动UP  气氛UP  粉丝UP</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-疯狂抽奖-5815582')}">马上申请</a>
+              <a href="http://120.132.65.239:52012/wall/www/scr_aspx.htm#lottery" target="_blank">效果演示</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">          
+              <h3>抽奖新玩法 嗨翻全场</h3>
+              <p>大屏抽奖，告别抽奖箱</p>
+              <div class="channel2-content-block">
+                <ul>
+                  <li>
+                    <h3>炫酷有趣</h3>
+                    <img src="../../../images/interact/choujiang/channel2-img1.png" alt="">
+                  </li>
+                  <li>
+                    <h3>吸粉神器</h3>
+                    <img src="../../../images/interact/choujiang/channel2-img2.png" alt="">
+                  </li>
+                  <li>
+                    <h3>安全稳定</h3>
+                    <img src="../../../images/interact/choujiang/channel2-img3.png" alt="">
+                  </li>
+                  <li>
+                    <h3>操作简单</h3>
+                    <img src="../../../images/interact/choujiang/channel2-img4.png" alt="">
+                  </li>
+                </ul>
+              </div>
+            </div>   
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">
+              <h3>多样选择 精彩不断</h3>
+              <div class="channel3-content-list">
+                <div class="channel3-content-list-block">
+                  <div class="channel3-content-list-block-img" @mouseenter="twoCodeShow('show1')" @mouseleave="twoCodeShow('hide1')">
+                    <img src="../../../images/interact/choujiang/channel31.jpg" alt="">  
+                    <div class="channel3-content-list-block-img-twocode" v-if="twoCode.show1">
+                      <img src="../../../images/interact/choujiang/two-code1.jpg" alt="">
+                      <p>扫码查看视频</p>
+                    </div> 
+                  </div>
+                  <h3>滚动抽奖</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>观众头像滚动抽奖，聚焦全场目光</p>
+                    <p><span></span>抽奖过程可控制，名单可管理</p>
+                    <p><span></span>无需下载软件，扫码即可开始抽奖</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                  
+                </div>
+                <div class="channel3-content-list-block">
+                  <div class="channel3-content-list-block-img" @mouseenter="twoCodeShow('show2')" @mouseleave="twoCodeShow('hide2')">
+                    <img src="../../../images/interact/choujiang/channel32.jpg" alt="">
+                    <div class="channel3-content-list-block-img-twocode" v-if="twoCode.show2">
+                      <img src="../../../images/interact/choujiang/two-code2.jpg" alt="">
+                      <p>扫码查看视频</p>
+                    </div>
+                  </div>          
+                  <h3>摇一摇抽奖</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>拼手速，摇动手机，不再靠运气</p>
+                    <p><span></span>人人参与，气氛热烈，引爆全场</p>
+                    <p><span></span>用户扫描摇一摇二维码，即可进入抽奖</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                  
+                </div>
+
+                <div class="channel3-content-list-block">
+                  <img src="../../../images/interact/choujiang/channel33.jpg" alt="">   
+                  <h3>数钱比赛</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>有钱任性，让参会者体验数钱数到手抽筋的畅快</p>
+                    <p><span></span>灵活把控控制台开关，轻松控制现场节奏</p>
+                    <p><span></span>3步完成后台设置，省力又省心</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                </div>
+                <div class="channel3-content-list-block">
+                  <img src="../../../images/interact/choujiang/channel34.jpg" alt="">   
+                  <h3>疯狂抢礼</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>预设有奖数字，占数位抢大奖，拼手速玩刺激</p>
+                    <p><span></span>使用简单，全场参与</p>
+                    <p><span></span>无需场地和硬件，扫码即可参与</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                </div>
+
+                <div class="channel3-content-list-block">
+                  <img src="../../../images/interact/choujiang/channel35.jpg" alt="">   
+                  <h3>赛道比拼</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>手机、大屏交互完成赛跑抽奖全过程</p>
+                    <p><span></span>公平公正竞技赢家直观显示</p>
+                    <p><span></span>后台操作简便，前台扫码即可开始游戏</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                </div>
+                <div class="channel3-content-list-block">
+                  <img src="../../../images/interact/choujiang/channel36.jpg" alt="">   
+                  <h3>老虎机</h3>
+                  <div class="channel3-content-list-block-font">
+                    <p><span></span>趣味老虎机抽奖，全场参与，随机中奖</p>
+                    <p><span></span>微信扫码，无需下载软件</p>
+                    <p><span></span>每拉动摇臂一次，最多抽5个</p>
+                  </div>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎申请试用','落地页-疯狂抽奖-5815582')}">申请试用</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <h3>设置自如  随心所欲</h3>
+              <div class="channel4-content-list">
+                <h3>通过后台可以设置</h3>
+                <div class="channel4-content-list-img">
+                  <ul>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon1.png" alt="">
+                      <p>中奖名额</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon2.png" alt="">
+                      <p>奖品信息</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon3.png" alt="">
+                      <p>界面效果</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon4.png" alt="">
+                      <p>游戏方式</p>
+                    </li>
+                  </ul>
+                </div>  
+              </div>
+              <div class="channel4-content-list">
+                <h3>可管理设置抽奖嘉宾</h3>
+                <div class="channel4-content-list-img">
+                  <ul>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon5.png" alt="">
+                      <p>签到用户</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon6.png" alt="">
+                      <p>参会名单</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon7.png" alt="">
+                      <p>还未中奖者</p>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/choujiang/icon8.png" alt="">
+                      <p>其他自定义</p>
+                    </li>
+                  </ul>
+                </div>  
+              </div>
+
+            </div>
+          </div>
+
+          <div class="channel5">
+            <div class="channel5-content">
+              <h3>经典案例</h3>  
+              <div class="channel5-content-block">
+                <ul>
+                  <li>
+                    <img src="../../../images/interact/choujiang/case1.jpg" alt="">
+                    <h3>福田汽车集团全球合作伙伴大会</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/choujiang/case2.jpg" alt="">
+                    <h3>达利集团订货会</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/choujiang/case3.jpg" alt="">
+                    <h3>创维第六届万人大团购</h3>
+                  </li>
+
+                  <li>
+                    <img src="../../../images/interact/choujiang/case4.jpg" alt="">
+                    <h3>万达样板房产品说明会</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/choujiang/case5.jpg" alt="">
+                    <h3>绝味鸭脖十周年庆典</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/choujiang/case6.jpg" alt="">
+                    <h3>体育大生意年度峰会</h3>
+                  </li>
+                </ul>      
+              </div>          
+            </div>
+          </div>
+
+          <div class="section e-channel9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-疯狂抽奖-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

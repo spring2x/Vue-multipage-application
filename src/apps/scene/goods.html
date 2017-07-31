@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>订货会</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../components/header.html")
+    <div class="wrapper">
+      <div class="g-content">
+        <div class="g-content-right">
+          <div class="g-top-img">
+            <div class="g-top-ad">
+              <div class="col-md-12">
+                <h1 class="g-title-1 animate">嗨订货</h1>
+                <h3 class="g-title-2 animate">全新订货会，再创业绩新高度</h3>
+                <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">马上申请</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="m-channel1">
+            <div class="m-channel1-content">
+              <p>
+                如何开好订货会、经销商大会，让业绩有保障、有提升，每家公司都在绞尽脑汁。31会议，作为领先的会议科技服务商，通过应用互联网、物联网等技术，实现订货会、经销商大会的一站式全流程数字化。实现订货会的新服务、新玩法，为业绩提升助力赋能。
+              </p>
+            </div>
+          </div>
+          <div class="g-channel2 m-channel2">
+            <div class="m-channel2-content">
+              <h3>31会议嗨订货，助力订货会全流程</h3>
+              <ul>
+                <li><span></span>重塑参会体验</li>
+                <li><span></span>优化会议流程</li>
+                <li><span></span>创业绩新高度</li>
+              </ul>
+            </div>
+          </div>
+          <div class="m-channel3">
+            <div class="m-channel3-content">
+              <h3>嗨订货的数字化路径</h3>
+              <div id="auot-scroll" class="m-channel3-left">
+                <ul class="m-channel3-list">
+                  <h4><span></span>会前</h4>
+                  <li>
+                    <span></span>
+                    <div class="g-channel3-block m-channel3-block">
+                      <h3>注册参会体验好</h3>
+                      <ul>
+                        <li>订货会网站/微站(支持中/英文)</li>
+                        <li>个性化电子邀请函</li>
+                        <li>企业团队邀约注册</li>
+                        <li>多种支付方式(支持美金)</li>
+                        <li>获取电子票</li>
+                        <li>便捷消息通知</li>
+                        <li>数据管理</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <h4><span></span>会中</h4>
+                  <li>
+                    <span></span>
+                    <div class="g-channel3-block m-channel3-block">
+                      <h3>现场签到速度快</h3>
+                      <ul>
+                        <li>接机/车管理</li>
+                        <li>分房管理</li>
+                        <li>注册签到</li>
+                        <li>现场制证</li>
+                        <li>自助签到</li>
+                        <li>就餐管理</li>
+                        <li>资料礼品发放管理</li>
+                        <li>实时签到数据监控</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <span></span>
+                    <div class="g-channel3-block-higher m-channel3-block m-channel3-block-bgcolor">
+                      <h3>手机订货订得多</h3>
+                      <ul>
+                        <li>欢迎大屏</li>
+                        <li>订货土豪榜</li>
+                        <li>区域/小组PK订货</li>
+                        <li>阶梯价</li>
+                        <li>总奖池金额瓜分订货</li>
+                        <li>实时订货排行榜</li>
+                        <li>畅销商品榜</li>
+                        <li>座位图下单跟进</li>
+                        <li>多轮次多场次订货</li>
+                        <li>满减/返现等促销方式灵活</li>
+                        <li>场内场外双向订货</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <span></span>
+                    <div class="m-channel3-block m-channel3-block-higher">
+                      <h3>现场互动</h3>
+                      <ul>
+                        <li>摇一摇抽奖</li>
+                        <li>滚动抽奖</li>
+                        <li>天降红包</li>
+                        <li>赛道比拼</li>
+                        <li>企业红包</li>
+                        <li>疯狂抢礼</li>
+                        <li>互动大屏</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <h4><span></span>会后</h4>
+                  <li>
+                    <span></span>
+                    <div class="m-channel3-block">
+                      <h3>会后答谢便捷发</h3>
+                      <ul>
+                        <li>短信答谢</li>
+                        <li>邮件答谢</li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <span></span>
+                    <div class="m-channel3-block m-channel3-block-higher">
+                      <h3>数据报表随需出</h3>
+                      <ul>
+                        <li>订货统计</li>
+                        <li>邀约统计</li>
+                        <li>出席率统计</li>
+                        <li>VIP统计</li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="m-channel3-right">
+                <div class="m-channel3-img"></div>
+                <div class="m-channel3-img"><img src="../../images/scene/g-show1.jpg" alt=""></div>
+                <div class="m-channel3-img"></div>
+                <div class="m-channel3-img">
+                  <div class="carousel-img5">
+                    <ul class="big-img5">
+                      <li>
+                        <p>iPad/手机签到</p>
+                      </li>
+                      <li>
+                        <p>微信签到</p>
+                      </li>
+                      <li>
+                        <p>身份证签到</p>
+                      </li>
+                      <li>
+                        <p>手环签到</p>
+                      </li>
+                      <li>
+                        <p>地毯签到</p>
+                      </li>
+                      <li>
+                        <p>现场制证</p>
+                      </li>
+                    </ul>
+                    <ul class="dot5">
+                      <li class="hover"></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="m-channel3-img m-channel3-imgshow">
+                  <div class="carousel-img8">
+                    <ul class="big-img10">
+                      <li>
+                        <p>欢迎大屏</p>
+                      </li>
+                      <li>
+                        <p>订货土豪榜</p>
+                      </li>
+                      <li>
+                        <p>区域/小组PK订货</p>
+                      </li>
+                      <li>
+                        <p>阶梯价</p>
+                      </li>
+                      <li>
+                        <p>总奖池金额瓜分订货</p>
+                      </li>
+                      <li>
+                        <p>实时订货排行榜</p>
+                      </li>
+                      <li>
+                        <p>畅销商品榜</p>
+                      </li>
+                      <li>
+                        <p>座位图下单跟进</p>
+                      </li>
+                    </ul>
+                    <ul class="dot10">
+                      <li class="hover"></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="m-channel3-img">
+                  <div class="carousel-img9">
+                    <ul class="big-img9">
+                      <li>
+                        <p>滚动抽奖</p>
+                      </li>
+                      <li>
+                        <p>摇一摇抽奖</p>
+                      </li>
+                      <li>
+                        <p>天降红包</p>
+                      </li>
+                      <li>
+                        <p>赛道比拼</p>
+                      </li>
+                      <li>
+                        <p>企业红包</p>
+                      </li>
+                      <li>
+                        <p>疯狂抢礼</p>
+                      </li>
+                    </ul>
+                    <ul class="dot9">
+                      <li class="hover"></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                      <li></li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="m-channel3-img"></div>
+                <div class="m-channel3-img"><img src="../../images/scene/m-show11.jpg" alt=""></div>
+                <div class="m-channel3-img"><img src="../../images/scene/g-show6.jpg" alt=""></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-channel4 new-case">
+            <div class="cooperative">
+              <div class="new-case-header">经典案例
+                <!--<span class="more-icon"><a href="javascript:;">更多</a></span>-->
+              </div>
+              <div class="new-case-body">
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case1.png" /></a>
+                      </div>
+                    <h3><a href="javascript:;">达利集团订货会</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case2.png" /></a></div>
+                    <h3><a href="javascript:;">四季沐歌2017聚势群英会</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case3.png" /></a></div>
+                    <h3><a href="javascript:;">联想全球供应商大会</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case4.png" /></a></div>
+                    <h3><a href="javascript:;">2017宝马经销商合作伙伴会议</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case5.png"></a></div>
+                    <h3><a href="javascript:;">玛格家具经销商大会</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="new-case-block">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a href="javascript:;"><img src="../../images/scene/good-case6.png"></a></div>
+                    <h3><a href="javascript:;">两面针产品升级订货会</a></h3>
+                    <!--<p>2017.4.22</p>-->
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-channel5 a-channel6">
+            <div class="channel6">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="logo-carousel">
+                <ul class="logo-list">
+                  <li><img src="../../images/home/user_logo_58.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_59.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_60.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_61.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_62.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_63.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_64.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_09.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_10.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_11.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_12.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_13.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_14.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_15.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_16.jpg" alt=""></li>
+                  <!-- <li><img src="../../images/home/user_logo_25.jpg" alt=""></li> -->
+                  <li><img src="../../images/home/user_logo_26.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_27.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_28.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_29.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_30.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_31.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_32.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_41.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_42.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_43.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_44.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_45.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_46.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_47.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_48.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_57.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_58.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_59.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_60.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_61.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_62.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_63.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_64.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_09.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_10.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_11.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_12.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_13.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_14.jpg" alt=""></li>
+                  <li><img src="../../images/home/user_logo_15.jpg" alt=""></li>
+                </ul>
+                <i class="prev"></i>
+                <i class="next"></i>
+              </div>
+            </div>
+          </div>
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="396305106"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    #include("../../components/loading.html") #include("../../components/footer.html")
+  </div>
+</body>
+
+</html>

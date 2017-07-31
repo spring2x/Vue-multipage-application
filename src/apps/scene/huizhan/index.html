@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>31分房系统</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>智慧会展</h1>
+              <h3>连接 转化 集客 共赢</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-展会-5815582')}">马上申请</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">          
+              <p>创新<br>价值</p>
+              <p>数字化连接</p>
+              <p>创新网络推广</p>
+              <p>观众体验<br>智能科技</p>
+              <p>展商集客场化</p>
+              <p>数据可视化<br>转化可量化</p>
+            </div>   
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">
+              <h3>面向主办方、参展方和观众的数字化服务体系</h3>
+              <div class="channel3-content-img">
+                <div class="channel3-content-img-line1">
+                  <span>展会网络营销服务包</span>
+                  <span></span>
+                  <span></span>
+                </div> 
+                <div class="channel3-content-img-line2">
+                  <span>数字化展中会服务包</span>
+                  <span></span>
+                  <span></span>
+                </div> 
+                <div class="channel3-content-img-line3">
+                  <span>社群化观众运营服务包</span>
+                  <span></span>
+                </div> 
+
+                <div class="channel3-content-img-line4">
+                  <span>观众预登记服务包</span>
+                  <span></span>
+                </div> 
+                <div class="channel3-content-img-line5">
+                  <span>展台集客服务包</span>
+                  <span></span>
+                  <span></span>
+                </div> 
+                <div class="channel3-content-img-line6">
+                  <span>现场智能登记入场服务包</span>
+                  <span></span>
+                  <span></span>
+                </div> 
+              </div>
+              <div class="channel3-content-title">智慧会展全流程数字化解决方案</div>
+              <div class="channel3-content-list">
+                <ul>
+                  <li>
+                    <h3>展前数据准备</h3>
+                    <p>会展网站建设</p>
+                    <p>会展微站建设</p>
+                    <p>会展APP开发</p>
+                    <p>微信公号运营</p>              
+                  </li>
+                  <li>
+                    <h3>推广及邀约</h3>
+                    <p>展位竞拍销售</p>
+                    <p>邀请函制作</p>
+                    <p>预登记报名</p>
+                    <p>渠道推广效果监测</p> 
+                    <p>移动支付管理</p>         
+                  </li>
+                  <li>
+                    <h3>观众登记</h3>
+                    <p>观众登记</p>
+                    <p>现场自助登记</p>
+                    <p>卡证制作领取</p>
+                    <p>门禁入场控制</p> 
+                    <p>数据实时统计</p>  
+                  </li>
+
+                  <li>
+                    <h3>展中会议及互动</h3>
+                    <p>展中会议及互动</p>
+                    <p>观众互动服务</p>
+                    <p>论坛/会议数字管理</p>
+                    <p>第三方服务接口</p> 
+                    <p>展会及离展导航</p>  
+                    <p>展台营销互动服务</p>
+                    <p>媒体服务中心</p>
+                  </li>
+                  <li>
+                    <h3>数据分析及报告</h3>
+                    <p>注册登记分析</p>
+                    <p>观众数据分析</p>
+                    <p>交易分析</p>
+                    <p>展商数据分析</p> 
+                    <p>第三方服务分析</p>  
+                    <p>媒体报道分析</p>
+                    <p>各类自定义分析</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="channel3-content-arrow">
+                <ul>
+                  <li>展前</li>
+                  <li>展中</li>
+                  <li>展后</li>
+                </ul>
+              </div>
+              <div class="channel3-content-qua">
+                <ul>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li>
+                    <img src="../../../images/scene/huizhan/safe.png" alt="">
+                    <p>安全管理体系</p>
+                  </li>
+                  <li>
+                    <p>SaaS 系统</p>
+                    <span></span>
+                    <p>基础服务</p>
+                  </li>
+                  <li>
+                    <img src="../../../images/scene/huizhan/service.png" alt="">
+                    <p>增值服务体系</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <div class="channel4-content-font">
+                <h3>网络营销服务包</h3>
+                <h4>用于展会前宣传推广，帮助主办方以更高效、便捷、多样的方式进行信息传播，<br>收获更多粉丝和参会人，同时可实现宣传渠道效果追踪分析。</h4>
+                <p><span></span>几十种PC网站模板，可定制，支持中英文</p>
+                <p><span></span>微网站多模板可选，页面个性化自配置</p>
+                <p><span></span>功能与服务可嫁接微信公众号</p>
+                <p><span></span>电子海报、电子邀请函、在线分销、参数二维码等多种营销工具</p>
+              </div>
+              <img src="../../../images/scene/huizhan/channel4.png" alt="">
+            </div>
+          </div>
+
+          <div class="channel5">
+            <div class="channel5-content">
+              <img src="../../../images/scene/huizhan/channel5.png" alt="">
+              <div class="channel5-content-font">
+                <h3>网络营销服务包</h3>
+                <h4>可通过PC端和移动端实现完整的在线预登记流程，使参会人可以随时<br>随地报名参会，帮助主办方提高工作效率，有序统计分析和管理参<br>会人、实现展会现场预判，为现场高效签到奠定坚实基础。</h4>
+                <p><span></span>预登记流程可配置</p>
+                <p><span></span>观众审核、消息通知、电子票发放等</p>
+                <p><span></span>数据统计分析与管理</p>
+              </div> 
+            </div>
+          </div>
+
+          <div class="channel6">
+            <div class="channel6-content">
+              <div class="channel6-content-font">
+                <h3>现场智能登记入场服务包</h3>
+                <h4>针对展会超大人流提供的高效、有序、体验佳的入场方案，可真对不同<br>会展规模和等级需求提供不同解决方案，帮助主办方节约人力物力、提<br>升品牌形象。</h4>
+                <p><span></span>预登记观众可持电子票，直接扫描入场，如卡证，可扫描电子票自<br>动打印证件</p>
+                <p><span></span>借助其他设备，可选择手机/iPAD签到、RFID签到、闸机签到、地<br>毯签到、手环签到等多种签到方式</p>
+                <p><span></span>临时到达现场人员，可实现现场注册登记、现场制证</p>
+              </div>
+              <div class="channel6-content-img">
+                <carousel></carousel>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel7">
+            <div class="channel7-content">
+              <img src="../../../images/scene/huizhan/channel7.png" alt="">
+              <div class="channel7-content-font">
+                <h3>各类资讯便捷发布管理</h3>
+                <h4>专为展会中的论坛会议打造，一站式全流程的展中会解决方案，满足展<br>中会的营销、运营和数据管理需求可单独使用或与整个展会结合使用。</h4>
+                <p><span></span>一站支持完成论坛会议发布、邀约推广、注册报名与支付审<br>核、电子票发送、现场电子签到、多方式现场互动、参会人</p>
+                <p><span></span>支持多论坛会议不同签到设置，可现场打印胸牌</p>
+              </div> 
+            </div>
+          </div>
+
+          <div class="channel8">
+            <div class="channel8-content">      
+              <div class="channel8-content-font">
+                <h3>展台集客服务包</h3>
+                <h4>帮助展商增加展台关注度和吸引力，通过与观众的多样性线上线下互<br>动，吸引大量粉丝和到站人数，提高现场销售额，从而可实现持续性营<br>销推广与销售提升</h4>
+                <p><span></span>展商、展位信息推送</p>
+                <p><span></span>电子海报、抽奖、优惠券、红包、打赏等工具满足企业个性化营销需求</p>
+                <p><span></span>观众数据收集、分析与管理</p>
+              </div> 
+              <img src="../../../images/scene/huizhan/channel8.png" alt="">
+            </div>
+          </div>
+
+          <div class="channel9">
+            <div class="channel9-content">
+              <img src="../../../images/scene/huizhan/channel9.png" alt="">
+              <div class="channel9-content-font">
+                <h3>多维度统计报表便于分析决策</h3>
+                <h4>通过该服务包，可实现对观众历次参会全过程的行为跟踪、数据积累<br>和统计分析，同时结合日常运营管理工具，实现战略目标和营销决策<br>优化，更清晰的观众和客户定位，从而不断提高展会效果。</h4>
+                <p><span></span>数据导入、宣传渠道接入、观众预登记、现场签到、观众<br>场内互动行为采集等数据采集方式</p>
+                <p><span></span>红包、抽奖、问卷、投票等多种互动形式吸引观众主动分<br>享传播</p>
+                <p><span></span>粉丝、会员分组分层管理</p>
+                <p><span></span>历史观众、当期观众、粉丝数据分析和管理</p>
+              </div> 
+            </div>
+          </div>
+
+          <div class="section e-channel9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-展会-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

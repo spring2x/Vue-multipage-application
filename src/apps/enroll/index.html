@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>注册报名系统</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../components/header.html")
+    <div class="wrapper page-enroll">
+      <div class="e-content">
+        <div class="e-content-right">
+          <div class="section active" data-anchor="#1">
+            <div class="e-top-img">
+              <div class="e-top-ad">
+                <div class="col-md-12">
+                  <h1 class="e-title-1 animate">注册报名系统</h1>
+                  <h3 class="e-title-2 animate">应用最广的注册报名系统</h3>
+                  <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">马上申请</a>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+            <div class="e-channel1">
+              <div class="e-channel1-content">
+                <ul>
+                  <li v-for="(item,index) in bgChange" :data-menuanchor="item.dataMenu"><a :href="item.link" @click="bgChangeClick(item)" :class="{bgChangeClick:bgChangeCss.color==item.id}">{{item.p1}}<br>{{item.p2}}</a></li>
+                </ul>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="section e-channel2" data-anchor="#2">
+            <div class="e-channel2-content">
+              <div class="e-channel2-text">
+                <h3>专业大会模板<br>快速建设大会网站/微站</h3>
+                <ul>
+                  <li><span></span>中英文版本满足国内/国际大会需求</li>
+                  <li><span></span>提供标准+定制化网站建设</li>
+                  <li><span></span>页面设计+应用研发，提供一体化服务</li>
+                  <li><span></span>模块化管理展示会议介绍、日程、嘉宾、参会指南等</li>
+                  <li><span></span>参会人可自定义选择关注嘉宾和日程</li>
+                </ul>
+              </div>
+              <div class="e-channel2-img"><img src="../../images/conference/e-channel2.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel3" data-anchor="#3">
+            <a name="conference2"></a>
+            <div class="e-channel3-content">
+              <div class="e-channel3-text">
+                <h3>一套内容，三屏联动<br>网站、微站、iPad</h3>
+                <ul>
+                  <li><span></span>适用于PC网站、微网站、微信邀请函、APP（安卓+iOS）、微信公众号等</li>
+                  <li><span></span>电脑屏、手机屏、iPad屏三屏同步适配</li>
+                </ul>
+              </div>
+              <div class="e-channel3-img"><img src="../../images/conference/e-channel3.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel4" data-anchor="#4">
+            <a name="conference3"></a>
+            <div class="e-channel4-content">
+              <div class="e-channel4-text">
+                <h3>流程设计器<br>报名流程随需配</h3>
+                <ul>
+                  <li><span></span>支持预约报名，邀请码定向邀约注册</li>
+                  <li><span></span>可自定义票种类型，支持多票种购票选择</li>
+                  <li><span></span>支持多种折扣购票模式 </li>
+                  <li><span></span>支持多报名通道，每个通道可设置不同报名表单，选择不同会议日程</li>
+                  <li><span></span>集成酒店预订管理</li>
+                </ul>
+              </div>
+              <div class="e-channel4-img"><img src="../../images/conference/e-channel4.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel5" data-anchor="#5">
+            <div class="e-channel5-content">
+              <div class="e-channel5-text">
+                <h3>参会管理，超级大表<br>随需分配</h3>
+                <ul>
+                  <li><span></span>360个报名字段，支持表单字段自定义</li>
+                  <li><span></span>一个表单适配于多个页面，跟踪不同页面数据来源</li>
+                  <li><span></span>多种表单样式模板自由选择</li>
+                  <li><span></span>字段间的逻辑规则自由配置</li>
+                  <li><span></span>支持字段显示/隐藏</li>
+                </ul>
+              </div>
+              <div class="e-channel5-img"><img src="../../images/conference/e-channel5.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel6" data-anchor="#6">
+            <div class="e-channel6-content">
+              <div class="e-channel6-text">
+                <h3>会议支付<br>国际国内一键开通</h3>
+                <ul>
+                  <li><span></span>支持人民币、美元支付</li>
+                  <li><span></span>支持微信支付、支付宝支付、PayPal支付、银联支付</li>
+                  <li><span></span>支持22家银行和金融支付机构 </li>
+                  <li><span></span>支持线下支付</li>
+                </ul>
+              </div>
+              <div class="e-channel6-img"><img src="../../images/conference/e-channel6.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel7" data-anchor="#7">
+            <div class="e-channel7-content">
+              <div class="e-channel7-text">
+                <h3>超强表单随需配</h3>
+                <ul>
+                  <li><span></span>多渠道来源参会人名单，智能数据去重，便捷整合生成标准超级大表，方便管理使用</li>
+                  <li><span></span>分权限参会人管理，各权限分别管理所属参会人，可进行增删改查</li>
+                  <li><span></span>参会人超级大表随需拆分，分配给不同权限人，适用于多场景：签到、就餐、分房、接机/车等</li>
+                </ul>
+              </div>
+              <div class="e-channel7-img"><img src="../../images/conference/e-channel7.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel8" data-anchor="#8">
+            <div class="e-channel8-content">
+              <div class="e-channel8-text">
+                <h3>各类报表，随需生成</h3>
+                <ul>
+                  <li><span></span>参会报名基础数据、行为数据，管理数据等自由组合筛选查阅，一键导出</li>
+                  <li><span></span>多维度报表可视化、可量化</li>
+                </ul>
+              </div>
+              <div class="e-channel8-img"><img src="../../images/conference/e-channel8.png" alt=""></div>
+            </div>
+          </div>
+          <div class="section e-channel9" data-anchor="#9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <!--<img src="../../images/conference/e-companylogo.png" alt="">-->
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section g-channel6" data-anchor="#10">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="396305106"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!--<div class="section" data-anchor="11Page">
+                <div class="footer-top"></div>
+                
+            </div>-->
+        </div>
+      </div>
+    </div>
+    #include("../../components/footer.html")
+    #include("../../components/loading.html")
+  </div>
+</body>
+
+</html>

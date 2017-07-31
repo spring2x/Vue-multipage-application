@@ -1,0 +1,246 @@
+@import '../../../styles/mixin.scss';
+
+.channel1{
+  background-image: url(../../../images/footerMenu/Zxns/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px; 
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      line-height: 30px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  padding-top: 50px;
+  & .channel2-content{
+    width: 1400px;
+    margin: 0 auto;
+    & .channel2-title{
+      font-size: 18px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #E6E6E6;
+    }
+    & .position{
+      & .position-left{
+        float: left;
+        margin-right: 60px;
+        width: 1000px;
+        & .sell{
+          padding-top: 20px;
+          & .sell-title{
+            position: relative;
+            border-bottom: 1px dotted #cccccc;
+            & h3{
+              
+              & img{
+                margin-right: 20px;
+                margin-top: -10px;
+              }
+              font-size: 16px;
+            }
+            & p{
+              font-size: 12px;
+            }
+            & .glyphicon{
+              position: absolute;
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              line-height: 25px;
+              text-align: center;
+              cursor: pointer;
+              right: -25px;
+              top: 45px; 
+              font-size: 12px;
+              color: #0AA1E5;
+            }
+          }
+
+          & .sell-introduce{
+            color: #000;
+            & .sell-describe{
+              overflow: auto;
+              font-size: 14px;
+              margin-top: 20px;
+              & .sell-describe-title{
+                width: 9%;
+                float: left;
+                line-height: 30px;
+              }
+              & .sell-describe-content{
+                width: 90%;
+                float: left;
+                line-height: 30px;
+              }
+            }
+          }
+        }
+      }
+
+
+      & .position-right{
+        float: left;
+        width: 340px;
+        height: 107px;
+        background-color: #FAFAFA;
+        border-top: 2px solid #0AA1E5;
+        margin-top: 30px;
+        padding: 15px 0px 0px 20px;
+        & h4{
+          font-size: 18px;
+        }
+        & p{
+          font-size: 14px;
+          color: #666666;
+        }
+      }
+    }
+  }
+}
+
+.salary-title,.promotion-title,.team-title{
+  font-size: 18px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #E6E6E6;
+  margin-top: 70px;
+}
+
+
+.salary-list,.promotion-list,.team-img{
+    padding-top: 20px;
+}
+
+.salary-list ul li span,.promotion-list{
+  color: #000000;
+}
+
+.team-img{
+  overflow: auto;
+  width: 1112px;
+  margin: 0 auto;
+  & ul li{
+    padding: 0 40px 0px 0px;
+    float: left;
+  }
+  & ul li:nth-child(3){
+    padding: 0 0 0 0;
+  }
+}
+
+.join{
+  background-image: url(../../../images/footerMenu/Zxns/joinbg.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 274px;
+  margin-top: 50px;
+  & .join-content{
+    padding: 50px 0px 0px 80px;
+    h3{
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    a{
+      display: inline-block;
+      text-align: center;
+      width: 203px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+      background: #0AA1E5;
+      box-shadow: 0 1px 2px 0 rgba(0,0,0,0.50);
+      border-radius: 4px;
+      &:visited{
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+    p{
+      margin-top: 10px;
+      font-size: 12px;
+      color: #fff;
+    }
+  }
+}
+
+.footer-border{
+  margin-top: 0px;
+}
+
+@media screen and (max-width:1650px){
+  .channel2 .channel2-content{
+    width: 1200px;
+    & .position .position-left{
+      width: 800px;
+    }
+  }
+}
+@media screen and (max-width:1450px){
+  .channel2 .channel2-content{
+    width: 1100px;
+    & .position .position-left{
+      width: 700px;
+      & .sell .sell-introduce .sell-describe{
+        & .sell-describe-title{
+          width: 12%;
+        }
+        & .sell-describe-content{
+          width: 88%;
+        }
+      } 
+    }
+  }
+}
+@media screen and (max-width:1315px){
+  .channel2 .channel2-content{
+    width: 1000px;
+    & .position {
+      & .position-left{
+        width: 640px;
+      }
+      & .position-right{
+        width: 300px;
+      }
+    }
+    
+  }
+  .team .team-content {
+    & .team-img{
+      width: 1002px;
+      & ul li img{
+        width: 307px;
+      }
+    }
+     
+  }
+}
+

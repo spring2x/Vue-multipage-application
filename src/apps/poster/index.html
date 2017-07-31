@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>注册报名系统</title>
+</head>
+
+<body> 
+  <div id="app">
+    #include("../../components/header.html")
+    <div class="wrapper page-poster">
+    <div class="p-content">
+        <div class="p-content-right">
+            <div class="section active" data-anchor="firstPage">
+                <div class="p-top-img">
+                    <div class="p-top-ad">
+                        <div class="col-md-12">
+                            <h1 class="p-title-1 animate">H5海报</h1>
+                            <h3 class="p-title-2 animate">人人可代言的营销利器</h3>
+                            <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">马上申请</a>
+                        </div>  
+                        <div class="clearfix"></div> 
+                    </div>
+                </div>
+                <div class="p-channel1">
+                    <div class="p-channel1-content">
+                        <ul>
+                            <li v-for="(item,index) in bgChange" :data-menuanchor="item.dataMenu"><a :href="item.link" @click="bgChangeClick(item)" :class="{bgChangeClick:bgChangeCss.color==item.id}">{{item.p1}}<br>{{item.p2}}</a></li>
+                        </ul>                                   
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="section p-channel2" data-anchor="secondPage">
+                <div class="p-channel2-content">
+                    <div class="p-channel2-text">
+                        <h3>带参海报轻松制作</h3> 
+                        <ul>
+                            <li><span></span>活动、节日、入会等多场景模板可选，3分钟快速生成</li>
+                            <li><span></span>活动、店铺、商品、会员招募、公众号等二维码自动生成，直接引流</li>
+                            <li><span></span>人人分销推广海报，自动生成带参二维码，实现人人分销成果跟踪</li>
+                        </ul>   
+                    </div>
+                    <div class="p-channel2-img">
+                        <div class="carousel-img5">
+                            <ul class="big-img5">
+                                <li style="display:block;"><img src="../../images/poster/p-channel21.png" alt=""></li>
+                                <li><img src="../../images/poster/p-channel22.png" alt=""></li>
+                                <li><img src="../../images/poster/p-channel23.png" alt=""></li>
+                                <li><img src="../../images/poster/p-channel24.png" alt=""></li>
+                            </ul>
+                            <ul class="dot5"> 
+                                <li class="hover"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>         
+                </div>
+            </div>
+            
+            <div class="section p-channel3" data-anchor="3Page">
+                <div class="p-channel3-content">
+                    <div class="p-channel3-text">
+                        <h3>人人代言<br>裂变转发</h3>  
+                        <ul>
+                            <li><span></span>海报可自动生成代言人姓名及参数二维码</li>
+                            <li><span></span>关联微信公众号吸粉引流</li>
+                        </ul>   
+                    </div>
+                    <div class="p-channel3-img"><img src="../../images/poster/p-channel3.png" alt=""></div> 
+                </div>
+            </div>
+            
+            <div class="section p-channel4" data-anchor="4Page">
+                <div class="p-channel4-content">
+                    <div class="p-channel4-text">
+                        <h3>多重渠道便捷传播<br>报名流程随需配</h3> 
+                        <ul>
+                            <li><span></span>微信群、朋友圈、公众号、微博等多渠道一键传播</li>
+                            <li><span></span>支持短信、邮件一键发送海报</li>
+                        </ul>  
+                    </div>
+                    <div class="p-channel4-img"><img src="../../images/poster/p-channel4.png" alt=""></div> 
+                </div>
+            </div>
+            <div class="section p-channel5" data-anchor="5Page">
+                <div class="p-channel5-content">
+                    <div class="p-channel5-text">
+                        <h3>传播业绩可查<br>报酬可算</h3> 
+                        <ul>
+                            <li><span></span>海报传播效果实时统计，各渠道引流数据可查</li>
+                            <li><span></span>人人分销交易数据准确计算，方便佣金结算</li>
+                            <li><span></span>报名、关注公众号、商品购买、入会等用户数据累积沉淀</li>
+                        </ul>   
+                    </div>
+                    <div class="p-channel5-img"><img src="../../images/poster/p-channel5.png" alt=""></div>        
+                </div>
+            </div>
+            <div class="section p-channel6" data-anchor="6Page">
+                <div class="p-channel6-content">
+                    <div class="p-channel6-text">
+                        <h3>适用场景</h3> 
+                        <p>扩大活动、商品、品牌曝光率，增加活动报名量、商品成交量、会员吸收量</p>
+                        <p>有偿奖励参与传播、促成交易的推广员</p>
+                    </div>    
+                </div>
+            </div>
+
+
+
+
+            <div class="section e-channel9" data-anchor="7Page">
+                <div class="e-channel9-content">
+                    <h3>30万家企业/机构的选择</h3>
+                    <div class="company-logo">
+                        <ul>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo3.jpg" title="百度">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo4.jpg" title="联想">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo5.jpg" title="华为">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                        </li>
+
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                        </li>
+
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo17.jpg" title="博世">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo22.jpg" title="格力">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                        </li>
+
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo30.jpg" title="企源">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                        </li>
+                        <li>
+                            <span class="basic"></span>
+                            <img src="../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section g-channel6" data-anchor="8Page">
+                <div class="g-channel6-content">
+                    <div class="g-channel6-imformation">
+                        <h3>如果您需要进一步了解信息，请致电我们！</h3> 
+                        <div class="g-channel6-line"></div>
+                        <div class="g-channel6-phone">
+                            <img src="../../images/custom/g-phone.png" alt="">
+                            <span>400-690-3131</span>
+                        </div> 
+                    </div>
+                    <div class="g-channel6-tryout">
+                        <div class="g-tryout-top">欢迎申请试用</div>
+                        <div class="g-tryout-input">
+                            <apply-form from="396305106"></apply-form>
+                        </div>                                
+                    </div>
+                </div>
+
+            </div>
+                
+        </div>
+    </div>
+    </div>
+    #include("../../components/footer.html")
+    #include("../../components/loading.html")
+
+  </div>
+</body>
+
+</html>

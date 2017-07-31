@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>中型活动</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <div class="m-content">
+        <div class="m-content-right">
+          <div class="m-top-img">
+            <div class="m-top-ad">
+              <div class="col-md-12">
+                <h1 class="m-title-1 animate">互动云整体解决方案</h1>
+                <div class="m-title-2 animate">场景化跨屏互动平台</div>
+                <div class="m-title-2 animate">易用稳定 丰富有趣</div>
+                <a href="javascript:;" @click="()=>{ $root.$emit('toggleApplyModal', true) }">马上申请</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="m-channel1">
+            <div class="m-channel1-content">
+              <p>
+                互动云运用互联网云端技术，聚合了线上线下活动涉及的标准互动技术，并将其组件化、流程化，实现选择互动对象、挑选互动工具、制作互动内容、互动执行、互动监测、现场三屏联动，全流程一站完成。
+              </p>
+              <h3 class="m-channel1-title">31互动云·场景化跨屏互动平台</h3>
+              <div class="m-channel1-img">
+                <div class="m-channel1-img-block1">
+                  <ul>
+                    <li>大屏系统</li>
+                    <li>移动平台</li>
+                    <li>PC电脑端</li>
+                  </ul>
+                  <span>表现层</span>
+                </div>
+                <div class="m-channel1-img-block2">
+                  <ul>
+                    <li>
+                      <h3>震撼开幕</h3>
+                      <p><a href="/2017/cfccloud/interact#logwall">3D互动墙</a></p>
+                    </li>
+                    <li>
+                      <h3>幸运抽奖</h3>
+                      <p><a href="/2017/cfccloud/interact#choujiang">滚动抽奖</a></p>
+                      <p><a href="/2017/cfccloud/interact#choujiang">摇一摇抽奖</a></p>
+                      <p><a href="/2017/cfccloud/interact#choujiang">数钱比赛</a></p>
+                      <p><a href="/2017/cfccloud/interact#choujiang">老虎机</a></p>
+                      <p><a href="/2017/cfccloud/interact#choujiang">疯狂抢礼</a></p>
+                    </li>
+                    <li>
+                      <h3>现场互动</h3>
+                      <p><a href="/2017/cfccloud/interact#hudong">大屏聊天</a></p>
+                      <p><a href="/dashang">打赏/众筹</a></p>
+                      <p><a href="/2017/cfccloud/interact#hudong">弹幕</a></p>
+                    </li>
+
+                    <li>
+                      <h3>签约仪式</h3>
+                      <p><a href="/qianyue">签约上墙</a></p>
+                    </li>
+                    <li>
+                      <h3>大屏订货</h3>
+                      <p><a href="/2017/interactive/order">嗨订货</a></p>
+                    </li>
+                    <li>
+                      <h3>趣味游戏</h3>
+                      <p><a href="/2017/cfccloud/interact#youxi">竞猜</a></p>
+                      <p><a href="/2017/cfccloud/interact#youxi">对对碰</a></p>
+                      <p><a href="/2017/cfccloud/interact#youxi">许愿树</a></p>
+                    </li>
+
+                    <li>
+                      <h3>现场调查</h3>
+                      <p><a href="/2017/cfccloud/interact#diaocha">投票调查</a></p>
+                      <p><a href="/2017/cfccloud/interact#diaocha">评分</a></p>
+                    </li>
+                    <li>
+                      <h3>现金红包</h3>
+                      <p><a href="/hongbao">天降红包</a></p>
+                      <p><a href="/qyhongbao">企业红包</a></p>
+                    </li>
+                    <li>
+                      <h3>其他</h3>
+                      <p><a href="/2017/cfccloud/interact#zhibo">直播</a></p>
+                      <p><a href="/shake">iBeacon互动</a></p>
+                    </li>
+                    <li>
+                      <h3>三方接入</h3>
+                    </li>
+                  </ul>
+                  <span>应用中心</span>
+                </div>
+                <div class="m-channel1-img-block3">
+                  <ul>
+                    <li>
+                      <img src="../../../images/interact/index/icon1.png" alt="">
+                      <span>底层捆绑授权</span>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/index/icon2.png" alt="">
+                      <span>数据统计</span>
+                    </li>
+                    <li>
+                      <img src="../../../images/interact/index/icon3.png" alt="">
+                      <span>API数据接口</span>
+                    </li>
+                  </ul>
+                  <span>数据底层</span>
+                </div>
+                <div class="m-channel1-img-block3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="m-channel3">
+            <div class="m-channel3-content">
+              <h3>场景应用</h3>
+              <div id="auot-scroll" class="m-channel3-left">
+                <ul class="m-channel3-list">
+                  <template v-for="index in 9">
+                    <li @click="showChannel3Img(index)">
+                      <span></span>
+                      <div class="m-channel3-block" :class="mChannel3Index === index ? 'm-channel3-block-bgcolor' : ''">
+                        <template v-if="index === 1">
+                          <h3>震撼开幕</h3>
+                          <ul>
+                            <li>3D互动墙</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 2">
+                          <h3>幸运抽奖</h3>
+                          <ul>
+                            <li>滚动抽奖</li>
+                            <li>摇一摇抽奖</li>
+                            <li>数钱比赛</li>
+                            <li>老虎机</li>
+                            <li>疯狂抢礼</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 3">
+                          <h3>现场互动</h3>
+                          <ul>
+                            <li>大屏聊天</li>
+                            <li>打赏/众筹</li>
+                            <li>弹幕</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 4">
+                          <h3>签约仪式</h3>
+                          <ul>
+                            <li>签约上墙</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 5">
+                          <h3>大屏订货</h3>
+                          <ul>
+                            <li>嗨订货</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 6">
+                          <h3>趣味游戏</h3>
+                          <ul>
+                            <li>竞猜</li>
+                            <li>对对碰</li>
+                            <li>许愿树</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 7">
+                          <h3>现场调查</h3>
+                          <ul>
+                            <li>投票调查</li>
+                            <li>评分</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 8">
+                          <h3>现金红包</h3>
+                          <ul>
+                            <li>天降红包</li>
+                            <li>企业红包</li>
+                          </ul>
+                        </template>
+                        <template v-if="index === 9">
+                          <h3>其他</h3>
+                          <ul>
+                            <li>直播</li>
+                            <li>iBeacon互动</li>
+                          </ul>
+                        </template>
+                      </div>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+              <div class="m-channel3-right">
+                <template v-for="(len, i) in mChannel3Arrs">
+                  <div class="m-channel3-img" :class="mChannel3Index === (i+1) ? 'm-channel3-show' : ''">
+                    <template v-if="len<=1">
+                      <div :class="'m-channel3-img-item m-channel3-img-item'+ i">
+                      </div>
+                      <!-- 3D互动墙 -->
+                      <template v-if="i===0">
+                        <div class="m-channel3-img-item-content" :class="'m-channel3-img-item-content' + i">
+                          <dl>
+                            <dt class="m-channel3-img-content">3D互动墙</dt>
+                            <dd>开场神器，震撼展示</dd>
+                            <dd>多种形状拼接，完美宣传拼接</dd>
+                            <dd>可定制更多形状样式</dd>
+                          </dl>
+                        </div>
+                      </template>
+                      <!-- 签约上墙 -->
+                      <template v-if="i===3">
+                        <div class="m-channel3-img-item-content" :class="'m-channel3-img-item-content' + i">
+                          <dl>
+                            <dt class="m-channel3-img-content">签约上墙</dt>
+                            <dd>大屏签约更具仪式感</dd>
+                            <dd>多人签约，一人一设备</dd>
+                            <dd>签约字体颜色可调整，选择性强</dd>
+                            <dd>设置轻松，操作简单</dd>
+                          </dl>
+                        </div>
+                      </template>
+                      <!-- 大屏订货 -->
+                      <template v-if="i===4">
+                        <div class="m-channel3-img-item-content" :class="'m-channel3-img-item-content' + i">
+                          <dl>
+                            <dt class="m-channel3-img-content">PK拼、土豪榜、排行榜、阶梯价等订货PK方式任您选</dt>
+                            <dd>多场次多轮次订货策略随需配置、商品精细管理</dd>
+                            <dd>下单情况实时跟踪</dd>
+                            <dd>支持多屏同时扩展</dd>
+                          </dl>
+                        </div>
+                      </template>
+                      <!-- 现场调查 -->
+                      <template v-if="i===6">
+                        <div class="m-channel3-img-item-content" :class="'m-channel3-img-item-content' + i">
+                          <dl>
+                            <dt class="m-channel3-img-content">投票/评分</dt>
+                            <dd>针对某场活动某个话题发起投票活评分</dd>
+                            <dd>实时展示投票、评分情况</dd>
+                            <dd>多话题，多节目同时进行，自由切换</dd>
+                            <dd>投票评分结果可生成统计报表</dd>
+                          </dl>
+                        </div>
+                      </template>
+                    </template>
+                    <Carousel autoplay :autoplay-speed="3000" arrow="never" v-model="mChannel3Current[i]" v-else>
+                      <template v-for="num in len">
+                        <Carousel-item>
+                          <div :class="'m-channel3-img-item m-channel3-img-item' + i + num"></div>
+                          <div class="m-channel3-img-item-content" :class="'m-channel3-img-item-content' + i + num">
+                            <!-- 幸运抽奖 -->
+                            <template v-if="i===1 && num===1">
+                              <dl>
+                                <dt class="m-channel3-img-content">滚动抽奖</dt>
+                                <dd>全场参与，随机中奖</dd>
+                                <dd>微信扫码，无需下载软件</dd>
+                                <dd>以滚动名单中的用户姓名方式进行抽奖</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===1 && num===2">
+                              <dl>
+                                <dt class="m-channel3-img-content">摇一摇抽奖</dt>
+                                <dd>用户扫描摇一摇二维码，进入抽奖</dd>
+                                <dd>拼手速，摇动手机，不再靠运气</dd>
+                                <dd>气氛热烈，引爆全场</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===1 && num===3">
+                              <dl>
+                                <dt class="m-channel3-img-content">数钱比赛</dt>
+                                <dd>有钱任性，体验数钱数到手抽经的畅快</dd>
+                                <dd>灵活把控控制台开关，轻松控制现场节奏</dd>
+                                <dd>3步完成后台设置，省力又省心</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===1 && num===4">
+                              <dl>
+                                <dt class="m-channel3-img-content">老虎机</dt>
+                                <dd>全场参与，随机中奖</dd>
+                                <dd>微信扫码，无需下载软件</dd>
+                                <dd>趣味抽奖，每拉动摇臂一次，最多抽5个</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===1 && num===5">
+                              <dl>
+                                <dt class="m-channel3-img-content">疯狂抢礼</dt>
+                                <dd>预设有奖数字，占数位抢大奖，拼手速玩刺激</dd>
+                                <dd>使用简单，全场参与</dd>
+                                <dd>无需场地和硬件</dd>
+                              </dl>
+                            </template>
+                            <!-- 现场互动 -->
+                            <template v-if="i===2 && num===1">
+                              <dl>
+                                <dt class="m-channel3-img-content">聊天互动-图片墙</dt>
+                                <dd>及时上墙，畅所欲言</dd>
+                                <dd>图片表情，想发就发</dd>
+                                <dd>自定义设置，灵活使用</dd>
+                                <dd>游戏抽奖，任意切换</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===2 && num===2">
+                              <dl>
+                                <dt class="m-channel3-img-content">打赏/众筹</dt>
+                                <dd>针对节目或人进行现金打赏</dd>
+                                <dd>打赏金额设定上下限，banner、掉落物、排序自定义</dd>
+                                <dd>数据统计简单明了</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===2 && num===3">
+                              <dl>
+                                <dt class="m-channel3-img-content">弹幕</dt>
+                                <dd>随时开启，随时关闭</dd>
+                                <dd>现场交流，私信交友</dd>
+                                <dd>实时互动，大屏展现</dd>
+                                <dd>敏感词屏蔽，审核功能齐全</dd>
+                                <dd>操作简单，参会嘉宾微信扫码即可发送弹幕</dd>
+                              </dl>
+                            </template>
+                            <!-- 签约上墙 -->
+                            <template v-if="i===3">
+                              <dl>
+                                <dt class="m-channel3-img-content">签约上墙</dt>
+                                <dd>大屏签约更具仪式感</dd>
+                                <dd>多人签约，一人一设备</dd>
+                                <dd>签约字体颜色可调整，选择性强</dd>
+                                <dd>设置轻松，操作简单</dd>
+                              </dl>
+                            </template>
+                            <!-- 大屏订货 -->
+                            <template v-if="i===4">
+                              <dl>
+                                <dt class="m-channel3-img-content">PK拼、土豪榜、排行榜、阶梯价等订货PK方式任您选</dt>
+                                <dd>多场次多轮次订货策略随需配置、商品精细管理</dd>
+                                <dd>下单情况实时跟踪</dd>
+                                <dd>支持多屏同时扩展</dd>
+                              </dl>
+                            </template>
+                            <!-- 趣味游戏 -->
+                            <template v-if="i===5 && num===1">
+                              <dl>
+                                <dt class="m-channel3-img-content">竞猜</dt>
+                                <dd>题目答案随意设置</dd>
+                                <dd>标题、背景、logo自定义切换</dd>
+                                <dd>题目抢答，增进印象</dd>
+                                <dd>大屏展示，清晰明了</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===5 && num===2">
+                              <dl>
+                                <dt class="m-channel3-img-content">对对碰</dt>
+                                <dd>随机配对，增强趣味</dd>
+                                <dd>配对玩游戏，配对交友</dd>
+                                <dd>操作简单，设置方便</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===5 && num===3">
+                              <dl>
+                                <dt class="m-channel3-img-content">许愿树</dt>
+                                <dd>新年愿望大胆说出来，说不定就实现了呢</dd>
+                                <dd>随时发送，实时上墙</dd>
+                                <dd>操作简单，使用方便</dd>
+                              </dl>
+                            </template>
+                            <!-- 现场调查 -->
+                            <template v-if="i===6">
+                              <dl>
+                                <dt class="m-channel3-img-content">投票/评分</dt>
+                                <dd>针对某场活动某个话题发起投票活评分</dd>
+                                <dd>实时展示投票、评分情况</dd>
+                                <dd>多话题，多节目同时进行，自由切换</dd>
+                                <dd>投票评分结果可生成统计报表</dd>
+                              </dl>
+                            </template>
+                            <!-- 现金红包 -->
+                            <template v-if="i===7 && num===1">
+                              <dl>
+                                <dt class="m-channel3-img-content">天降红包</dt>
+                                <dd>DIY打造您的专属互动，彰显品牌气质</dd>
+                                <dd>后台操作方便，前台简单有趣，一轮抢不停，惊喜多多</dd>
+                                <dd>形式多样，抢红包，抢礼品、发广告，灵活配置</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===7 && num===2">
+                              <dl>
+                                <dt class="m-channel3-img-content">企业红包</dt>
+                                <dd>定点摇一摇红包——品牌传播神器</dd>
+                                <dd>微信墙红包——现场互动，奖金现领</dd>
+                                <dd>普通粉丝红包——定向发送/主动领取</dd>
+                                <dd>裂变红包——裂变营销利器</dd>
+                              </dl>
+                            </template>
+                            <!-- 其他 -->
+                            <template v-if="i===8 && num===1">
+                              <dl>
+                                <dt class="m-channel3-img-content">直播</dt>
+                                <dd>快传播，一键分享微信、微博等社交平台</dd>
+                                <dd>PC、Mac、移动端均可随时发起</dd>
+                                <dd>打赏、抽奖、问答、问卷多种互动方式</dd>
+                                <dd>视频、音频、图片同步</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===8 && num===2">
+                              <dl>
+                                <dt class="m-channel3-img-content">iBeacon互动-摇周边</dt>
+                                <dd>精准定位位置，完美支持微信摇一摇</dd>
+                                <dd>摇一摇完成签到、互动、抽大奖</dd>
+                                <dd>打赏、抽奖、问答、问卷多种互动方式</dd>
+                                <dd>吸粉、收集参会人信息、强互动、品牌宣传……</dd>
+                              </dl>
+                            </template>
+                            <template v-if="i===8 && num===3">
+                              <dl>
+                                <dt class="m-channel3-img-content">iBeacon互动-摇周边</dt>
+                                <dd>精准定位位置，完美支持微信摇一摇</dd>
+                                <dd>摇一摇完成签到、互动、抽大奖</dd>
+                                <dd>打赏、抽奖、问答、问卷多种互动方式</dd>
+                                <dd>吸粉、收集参会人信息、强互动、品牌宣传……</dd>
+                              </dl>
+                            </template>
+                          </div>
+                        </Carousel-item>
+                      </template>
+                    </Carousel>
+                    <div class="m-channel3-img-content" :class="'m-channel3-img-content' + i">
+                    </div>
+                  </div>
+                </template>
+              </div>
+            </div>
+          </div>
+          <div class="g-channel4">
+            <div class="g-channel4-content">
+              <h3>31会议云服务应用于100多万场会议活动，已经积累了非常丰富的场景</h3>
+              <div class="g-channel4-size">
+                <p>不同规模、不同类型的会议/活动的创新、数字化实践，点击查看</p>
+                <ul>
+                  <li><a href="/static/corp/apps/cases?industry=1">中型活动</a></li>
+                  <li><a href="/static/corp/apps/scene/conference.html">大型会议</a></li>
+                  <li><a href="/static/corp/apps/scene/goods.html">订货会</a></li>
+                  <li><a href="http://corp.31huiyi.com/solution/annual">年会</a></li>
+                  <li><a href="/static/corp/apps/scene/trainMeet.html">培训会</a></li>
+                  <li><a href="http://corp.31huiyi.com/solution/huizhan">展会</a></li>
+                </ul>
+              </div>
+              <div class="g-channel4-industry">
+                <p>不同行业客户的会议/活动的创新、数字化实践，点击查看</p>
+                <ul>
+                  <li><a href="/static/corp/apps/cases?industry=1">TMT</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=2">金融</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=3">汽车</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=4">医药</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=5">快消</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=6">培训</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=7">社团</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=8">房产</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=9">政府</a></li>
+                  <li><a href="/static/corp/apps/cases?industry=10">媒体</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="m-channel5">
+            
+            <div class="m-channel5-content">
+              <h3 class="m-channel5-title">30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="396305106"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    #include("../../../components/loading.html") #include("../../../components/footer.html")
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+@import './reset.css';
+@import './mixin.scss';
+@import './loading.scss';
+@import '../libs/bootstrap/css/bootstrap.css';
+@import './home.css';
+@import '../libs/select2/css/select2.min.css';
+@import '../libs/animate.min.css';
+html,body{
+  font-size: 14px;
+  font-family: "Hiragino Sans GB","Microsoft Yahei"; 
+  -webkit-font-smoothing: antialiased;
+}
+.g-tryout-input{
+  padding: 20px 25px 15px 25px;
+}
+.wrapper{
+  padding: 75px 0 0 160px;
+}
+.center-left p {
+  padding-bottom: 10px;
+}
+#userinfo .sub-menu li a{
+  padding: 8px 0 8px 46px;
+}
+.s-topbar li.dropdown a span.s-username{
+  font-size: 16px;
+}
+
+// 顶部提示
+// .left-nav{
+//   top: 125px;
+// }
+// #header{
+//   top: 50px;
+// }

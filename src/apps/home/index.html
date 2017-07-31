@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../components/header.html")
+    <div class="wrapper">
+      <div id="center">
+        <div class="center-right">
+          <div class="right-carousel">
+            <big-carousel></big-carousel>
+            <!-- <div class="carousel-img">
+              <ul class="big-img">
+                <li v-for="item in bannerLists" :style="{background:'url('+ item.ImagePath +') center top no-repeat'}">
+                  <a :href="item.ADUrl"></a>
+                </li>
+              </ul>
+              <ul class="dot">
+                <li v-for="item in bannerLists.length"></li>
+              </ul>
+            </div> -->
+          </div>
+          <div class="information">
+            <div class="">
+              <!-- <div class="col-xs-12 col-sm-12 col-md-4"><span class="num">{{dataLists.OrganizerCount}}</span><span class="unit"> 家 </span>企业在使用</div>
+              <div class="col-xs-12 col-sm-12 col-md-4"><span class="num">{{dataLists.Eventcount}}</span><span class="unit"> 场 </span>会议在运营</div>
+              <div class="col-xs-12 col-sm-12 col-md-4"><span class="num">{{dataLists.AttendeeCount}}</span><span class="unit"> 位 </span>商务人士参会</div> -->
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <span class="num">
+                  <span class="rollnum" :data-to="dataLists.OrganizerCount[0]" data-speed="1000"></span><span>,0</span><span class="rollnum" :data-to="dataLists.OrganizerCount[1]" data-speed="1000"></span>
+                </span>
+                <span class="unit"> 家 </span>企业在使用
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <span class="num">
+                  <span>{{dataLists.Eventcount[0]}}</span><span>,</span><span class="rollnum" :data-to="dataLists.Eventcount[1]" data-speed="1000"></span><span>,</span><span class="rollnum" :data-to="dataLists.Eventcount[2]" data-speed="1000"></span>
+                </span>
+                <span class="unit"> 场 </span>会议在运营
+              </div>
+              <div class="col-xs-12 col-sm-12 col-md-4">
+                <span class="num">
+                  <span class="rollnum" :data-to="dataLists.AttendeeCount[0]" data-speed="1000"></span><span>,</span><span class="rollnum" :data-to="dataLists.AttendeeCount[1]" data-speed="1000"></span><span>,</span><span class="rollnum" :data-to="dataLists.AttendeeCount[2]" data-speed="1000"></span>
+                </span>
+                <span class="unit"> 位 </span>商务人士参会
+              </div>
+            </div>
+          </div>
+          <div class="our-product">
+            <div class="our-product-content">
+              <h2>我们的产品</h2>
+              <div class="our-product-list">
+                <div class="product-num product-num1">
+                  <img src="../../images/home/product_icon1_default.png" alt="">
+                  <h1>会议云</h1>
+                  <p>一站式全流程数字会务</p>
+                  <a href="http://corp.31huiyi.com/eventmanage/indexnew#page7">了解更多</a>
+                </div>
+                <div class="product-num product-num2">
+                  <img src="../../images/home/product_icon2_default.png" alt="">
+                  <h1>互动云</h1>
+                  <p>场景化跨屏互动平台</p>
+                  <a href="http://corp.31huiyi.com/wall?id=1">了解更多</a>
+                </div>
+                <div class="product-num product-num3">
+                  <img src="../../images/home/product_icon3_default.png" alt="">
+                  <h1>营销云</h1>
+                  <p>营销自动化云端系统</p>
+                  <a href="/static/corp/apps/market">了解更多</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="campany-logo">
+            <div class="our-custom">我们的客户</div>
+            <div class="industry">
+              <div class="industry-logo">
+                <ul class="industry-logo-list">
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=1">TMT</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=2">金融</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=3">汽车</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=4">医疗</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=5">快消</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=6">培训</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=7">社团</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=8">房产</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=9">政府</a></li>
+                  <li class="industry-icon"><a href="/static/corp/apps/cases?industry=10">媒体</a></li>
+                </ul>
+              </div>
+            </div>
+            <!--<companylogo></companylogo>-->
+            <div class="logo-carousel">
+              <ul class="logo-list">
+                <li v-for="item in logoLists"><img :src="item" alt=""></li>
+              </ul>
+              <i class="prev"></i>
+              <i class="next"></i>
+            </div>
+          </div>
+          <div class="new-case">
+            <div class="cooperative">
+              <div class="new-case-header">最新案例<span class="more-icon"><a href="/static/corp/apps/cases">更多</a></span>
+              </div>
+              <div class="new-case-body">
+                <div class="new-case-block" v-for="item in caseLists">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a :href="item.EventHref"><img :src="item.EventImgSrc" /></a>
+                    </div>
+                    <h3><a :href="item.EventHref">{{item.EventTitle}}</a></h3>
+                    <ul v-if="item.Industry!=''&&item.EventType.length>0&&item.City.length>0">
+                      <li>{{item.EventType[0]}}</li>
+                      <li>{{item.Industry}}</li>
+                      <li>{{item.City[0]}}</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+            </div>
+          </div>
+          <div class="hot-meeting">
+            <div class="cooperative">
+              <div class="new-case-header">
+                热门会议
+                <!--<span class="more-icon"><a href="javascript:;">更多</a></span>-->
+              </div>
+              <div class="new-case-body">
+                <div class="new-case-block" v-for="item in hotMeeting">
+                  <div class="inner">
+                    <div class="case_picture">
+                      <a :href="item.url"><img :src="item.img" /></a>
+                    </div>
+                    <h3><a :href="item.url">{{item.title}}</a></h3>
+                    <p>{{item.date}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    #include("../../components/footer.html") #include("../../components/loading.html")
+  </div>
+</body>
+
+</html>

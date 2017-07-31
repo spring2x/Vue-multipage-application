@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>大屏聊天互动</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>大屏聊天互动</h1>
+              <h3>大屏嗨聊过足瘾</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-大屏聊天互动-5815582')}">马上申请</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-font">
+                <h3>“墙”悍互动，细致入“微”</h3>
+                <p class="channel2-font-p">大屏聊天互动，又称微信大屏幕，串联大屏幕与观众，完成多种现场互动</p>
+                <p><span></span>观众直接通过手机即可在大屏评论发图、投票、互动等，无缝衔接主讲人，<br>使得观众获得更加强烈的参与感</p>
+                <p><span></span>可嵌入公众号，关注后上墙发言，成为王牌吸粉神器</p>
+                <h4 class="channel2-font-h4">适用场景：暖场聊天  |  演讲点评  |  提问答疑</h4>
+                <a href="http://120.132.65.239:52012/wall/www/scr_aspx.htm" class="channel2-font-btn">效果演示</a>
+              </div>
+              <div class="channel2-content-img">
+                  <img src="../../../images/interact/dphudong/Group11.png" alt="">
+              </div>
+            </div>
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">
+              <h3>强大功能 灵活使用</h3>
+              <div class="channel3-body">
+                <ul class="channel3-body-ul">
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-1.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">消息审核</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-2.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">模板设置</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-3.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">自定义logo</h3>         
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-4.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">自定义背景</h3>         
+                  </li>
+                </ul>
+                <ul class="channel3-body-ul">
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-5.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">过滤词</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-6.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">弹幕设置</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-7.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">私信</h3>         
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/qdgn-8.png" alt="" class="channel3-body-ul-img">
+                    <h3 class="channel3-body-ul-h3">名单管理</h3>         
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <h3>多种互动形式 畅玩无阻</h3>
+              <p>微信大屏幕还可承载更多互动形式，满足多种互动场景</p>
+              <p>台下观众通过微信中置入的31控制台也可在各功能间随意切换，轻松参与大屏幕互动</p>
+              <div class="channel4-content-body">
+                <div class="channel4-content-body-dash">
+                  <div class="channel4-content-body-dash-photo">
+                    <img src="../../../images/interact/dphudong/Group5.png" alt="">
+                  </div>
+                </div>
+                <div class="channel4-content-body-dapin">
+                  <div class="channel4-content-body-dapin-img">
+                    <p>大屏聊天</p>
+                  </div>
+                </div>  
+                <div class="channel4-content-body-danmu">
+                  <div class="channel4-content-body-danmu-img">
+                    <p>弹幕</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-tupianq">
+                  <div class="channel4-content-body-tupianq-img">
+                    <p>图片墙</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-gdcj">
+                  <div class="channel4-content-body-gdcj-img">
+                    <p>滚动抽奖</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-yaoyy">
+                  <div class="channel4-content-body-yaoyy-img">
+                    <p>摇一摇抽奖</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-tjhb">
+                  <div class="channel4-content-body-tjhb-img">
+                    <p>天降红包</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-xuyuans">
+                  <div class="channel4-content-body-xuyuans-img">
+                    <p>许愿树</p>
+                  </div> 
+                </div>
+                <div class="channel4-content-body-duiduip">
+                  <div class="channel4-content-body-duiduip-img">
+                    <p>对对碰</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-pingfen">
+                  <div class="channel4-content-body-pingfen-img">
+                    <p>评分</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-jingcai">
+                  <div class="channel4-content-body-jingcai-img">
+                    <p>竞猜</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-toupiao">
+                  <div class="channel4-content-body-toupiao-img">
+                    <p>投票</p>
+                  </div>
+                </div>
+                <div class="channel4-content-body-fkql">
+                  <div class="channel4-content-body-fkql-img">
+                    <p>疯狂抢礼</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="channel5">
+            <div class="channel5-content">
+              <h3>经典案例</h3>
+              <div class="channel5-body">
+                <ul class="channel5-body-ul">
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-1.jpg" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">周大福 85周年微信墙</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-2.jpg" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">黑马创业社群大会</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-3.jpg" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">2016旅行社行业发展高峰论坛</h3>         
+                  </li>
+                </ul>
+                <ul class="channel5-body-ul">
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-4.png" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">安粮集团成立四十周年庆典</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-3.png" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">铂涛集团十周年盛典</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/dphudong/jdal-2.png" alt="" class="channel5-body-ul-img">
+                    <h3 class="channel5-body-ul-h3">中诚信债券市场论坛2016</h3>         
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="section e-channel9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-大屏聊天互动-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

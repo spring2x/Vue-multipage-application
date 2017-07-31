@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>签约上墙</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>签约上墙</h1>
+              <h3>超有范的签约仪式，共同见证重要时刻</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-签约上墙-5815582')}">马上申请</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-font">
+                <p>签约上墙，应用于会议活动中签约仪式现场，由签约双方或多方在移动终端签名并将签名同步到现场大屏幕上，现场嘉宾与媒体</p>
+                <p>共同见证这一重要时刻，将签约仪式的气氛推到高潮，让签约本身更具新闻价值。</p>
+              </div>
+              <div class="channel2-img">
+                <ul>
+                  <li><span>创新型大屏签约</span></li>
+                  <li><span>签约气氛更热烈</span></li>
+                  <li><span>签约代表更显尊贵</span></li>
+                  <li><span>更利于朋友圈、媒体传播</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">             
+              <div class="channel3-font">
+                <h3>功能亮点</h3>
+                <p><span></span>移动端手写签名，大屏同步显示</p>
+                <p><span></span>支持多轮次签约，多人同时签约</p>
+                <p><span></span>支持签约背景、字体等自定义</p>
+                <p><span></span>移动端按头像快速选择签约代表</p>
+                <p><span></span>支持签约前大屏介绍、签约成功大屏庆祝</p>
+                <p><span></span>支持实时通信，网络监测</p>
+              </div>   
+              <div class="channel3-img">
+                <carousel></carousel>
+              </div>           
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <h3>经典案例</h3>
+              <div class="channel4-body">
+                <ul class="channel4-body-ul">
+                  <li @mouseenter="hoverSmallImg('1')" @mouseleave="leaveSmallImg('1')">
+                    <img src="../../../images/interact/qianyue/jdal-1.jpg" alt="" class="channel4-body-ul-img" >
+                    <div  class="channel4-body-ul-erweima" v-if="shadow">
+                      <img src="../../../images/interact/qianyue/two-code2.jpg" alt="">
+                      <p>扫码查看视频</p>
+                    </div>
+                    <h3 class="channel4-body-ul-h3">雀巢健康同阿里健康战略合作</h3>
+                  </li>
+                  <li @mouseenter="hoverSmallImg('2')" @mouseleave="leaveSmallImg('2')">
+                    <img src="../../../images/interact/qianyue/jdal-2.jpg" alt="" class="channel4-body-ul-img">
+                    <div  class="channel4-body-ul-erweima" v-if="shadow2">
+                      <img src="../../../images/interact/qianyue/two-code1.jpg" alt="">
+                      <p>扫码查看视频</p>
+                    </div>
+                    <h3 class="channel4-body-ul-h3">意大利对外贸易委员会&1919酒类直供战略合作</h3>
+                  </li>
+                </ul>
+                <ul class="channel4-body-ul">
+                  <li>
+                    <img src="../../../images/interact/qianyue/jdal-3.jpg" alt="" class="channel4-body-ul-img">
+                    <h3 class="channel4-body-ul-h3">红星美凯龙金融合作样板商场签约仪式</h3>
+                  </li>
+                  <li>
+                    <img src="../../../images/interact/qianyue/jdal-4.jpg" alt="" class="channel4-body-ul-img">
+                    <h3 class="channel4-body-ul-h3">中国工业大数据峰会</h3>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel5">
+            <div class="channel5-content">             
+              <div class="channel5-font">
+                <h3>功能亮点</h3>
+                <p>合同签约仪式&nbsp&nbsp|&nbsp&nbsp战略合作伙伴签约仪式&nbsp&nbsp|&nbsp&nbsp项目合作启动仪式&nbsp&nbsp|&nbsp&nbsp军令状/责任书签立</p>
+              </div> 
+            </div>
+          </div>
+
+          <div class="section e-channel9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-签约上墙-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

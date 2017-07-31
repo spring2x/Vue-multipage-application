@@ -1,0 +1,181 @@
+@import '../../../styles/mixin.scss';
+
+.channel1{
+  background-image: url(../../../images/download/tutorials/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px;
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  margin: 50px auto 100px;
+  & .channel2-content{
+    overflow: auto;
+    width: 1280px;
+    margin: 0 auto;
+    h3{
+      font-size: 30px;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    ul li{
+      width: 400px;
+      float: left;
+      &>img{
+        border: 1px solid #cecece;
+        width: 100%;
+      }
+      p:nth-child(2){
+        margin-top: 10px;
+        height: 40px;
+        line-height: 20px;
+        max-height: 40px;
+        overflow: hidden;       
+      }
+      p:nth-child(3){
+        & a{
+          display: inline-block;
+          width: 125px;
+          height: 35px;
+          border: 1px solid #0AA1E5;
+          text-decoration: none;
+          line-height: 33px;
+          text-align: center;
+          border-radius: 20px;
+          color: #0AA1E5;
+          & img{
+            margin-right: 10px;
+            margin-top: -5px;
+          }
+        }
+        & a:visited{
+          text-decoration: none;
+        }
+        & a:hover{
+          background-color: #6eccf6;
+          color: #FFF;
+        }
+        & span{
+          margin-top: 8px;
+          float: right;
+          & i{
+            color: #0AA1E5;
+          }
+        }
+      }
+    }
+    ul li:nth-child(1),ul li:nth-child(2){
+      margin: 0px 40px 0px 0px;
+    }
+  }
+  
+}
+@media screen and (max-width:1550px){
+  .channel2{
+    & .channel2-content{
+      width: 1130px;
+      ul li{
+        width: 350px;
+        float: left;
+      }
+
+    }
+    
+  }
+}
+@media screen and (max-width:1366px){
+  .channel2{
+    & .channel2-content{
+      width: 1040px;
+      ul li{
+        width: 320px;
+        float: left;
+      }
+
+    }
+    
+  }
+}
+@media screen and (max-width:1280px){
+  .channel2{
+    & .channel2-content{
+      width: 980px;
+      ul li{
+        width: 300px;
+        float: left;
+      }
+
+    }
+    
+  }
+}
+
+/*试用*/
+.g-channel6{
+    padding: 180px 0px 0px 55px;
+    height: 600px;
+    background: #f6f6f6;
+    margin-bottom: -83px;
+}
+.g-channel6-imformation h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.g-channel6-line{
+    height: 1px;
+    width: 200px;
+    margin-bottom: 20px;
+    background: #dedede;
+}
+.g-channel6-phone span{
+    font-size: 16px;
+}
+.g-channel6-content{
+    position: relative;
+} 
+.g-channel6-tryout{
+    position: relative;
+    width: 375px;
+    box-shadow: 0 0 5px #cccccc;
+    position: absolute;
+    right: 140px;
+    top: -250px;
+    background: #fff;
+}
+.g-tryout-top{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+}

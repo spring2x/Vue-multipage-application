@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>案例中心</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <div class="resource">
+        <div class="resource-right">
+          <div class="resource-right-banner">
+            <div class="resource-right-banner-content">
+              <h1>31服务资源</h1>
+              <h3>一站式提供会议服务/设备/耗材</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-31服务资源-5815582')}">马上申请</a>
+            </div>
+          </div>
+          <div class="resource-right-search">
+            <span>所有分类</span>
+            <span><input v-model="searchValue" type="text" placeholder="搜索服务 / 设备 / 耗材"><a href="javascript:;" @click="search()">搜索</a></span>
+          </div>
+          <div class="resource-right-classify">
+            <div class="resource-right-classify-content">
+              <div class="resource-right-classify-content-service" v-bind:class="{ classifyShow: classifyShow.service1.isShow, 'classifyHide': classifyShow.service1.isHide }">
+                <span>活动现场服务</span>
+                <span @click="serviceOne(-1)" :class="{caseChangeClick:choose.service1==-1}">全部</span>
+                <ul>
+                  <li v-for="(item,index) in service1" :class="{caseChangeClick:choose.service1==index}" @click="serviceOne(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[0]" @click="classifyIsShow('service1')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service1.iconDown,'ivu-icon-arrow-up-b':classifyShow.service1.iconUp}"></i>
+              </div>
+              <div class="resource-right-classify-content-service" v-bind:class="{ classifyShow: classifyShow.service2.isShow, 'classifyHide': classifyShow.service2.isHide }">
+                <span>技术支持服务</span>
+                <span @click="serviceTwo(-1)" :class="{caseChangeClick:choose.service2==-1}">全部</span>
+                <ul> 
+                  <li v-for="(item,index) in service2" :class="{caseChangeClick:choose.service2==index}" @click="serviceTwo(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[1]" @click="classifyIsShow('service2')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service2.iconDown,'ivu-icon-arrow-up-b':classifyShow.service2.iconUp}"></i>
+              </div>
+              <div class="resource-right-classify-content-service">
+                <span>制作开发服务</span>
+                <span @click="serviceThree(-1)" :class="{caseChangeClick:choose.service3==-1}">全部</span>
+                <ul>  
+                  <li v-for="(item,index) in service3" :class="{caseChangeClick:choose.service3==index}" @click="serviceThree(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[2]" @click="classifyIsShow('service3')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service3.iconDown,'ivu-icon-arrow-up-b':classifyShow.service3.iconUp}"></i>
+              </div>
+              <div class="resource-right-classify-content-service" v-bind:class="{ classifyShow: classifyShow.service4.isShow, 'classifyHide': classifyShow.service4.isHide }">
+                <span>会议科技设备</span>
+                <span @click="serviceFour(-1)" :class="{caseChangeClick:choose.service4==-1}">全部</span>
+                <ul>
+                  <li v-for="(item,index) in service4" :class="{caseChangeClick:choose.service4==index}" @click="serviceFour(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[3]" @click="classifyIsShow('service4')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service4.iconDown,'ivu-icon-arrow-up-b':classifyShow.service4.iconUp}"></i>
+              </div>
+              <div class="resource-right-classify-content-service" v-bind:class="{ classifyShow: classifyShow.service5.isShow, 'classifyHide': classifyShow.service5.isHide }">
+                <span>签到常用设备</span>
+                <span @click="serviceFive(-1)" :class="{caseChangeClick:choose.service5==-1}">全部</span>
+                <ul>
+                  <li v-for="(item,index) in service5" :class="{caseChangeClick:choose.service5==index}" @click="serviceFive(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[4]" @click="classifyIsShow('service5')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service5.iconDown,'ivu-icon-arrow-up-b':classifyShow.service5.iconUp}"></i>
+              </div>
+              <div class="resource-right-classify-content-service" v-bind:class="{ classifyShow: classifyShow.service6.isShow, 'classifyHide': classifyShow.service6.isHide }">
+                <span>签到常用设备</span>
+                <span @click="serviceSix(-1)" :class="{caseChangeClick:choose.service6==-1}">全部</span>
+                <ul>
+                  <li v-for="(item,index) in service6" :class="{caseChangeClick:choose.service6==index}" @click="serviceSix(item)">{{item.name}}</li>
+                </ul>
+                <i v-if="rightArrow[5]" @click="classifyIsShow('service6')" class="ivu-icon" v-bind:class="{'ivu-icon-arrow-down-b':classifyShow.service6.iconDown,'ivu-icon-arrow-up-b':classifyShow.service6.iconUp}"></i>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- <div v-if="getDataLength.num!=0" class="resource-right-article"> -->
+          <div v-if="true" class="resource-right-article">
+            <div class="resource-right-article-content">
+              <div class="resource-right-article-content-list">
+                <ul>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  <li>
+                    <a href="javascript:;"><img src="../../../images/interact/choujiang/case1.jpg" alt=""></a>
+                    <h3><a href="javascript:;">网站建设</a></h3>
+                    <p>我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符我是占位符</p>
+                  </li>
+                  
+                </ul>
+              </div>
+              <div class="resource-right-article-content-pages">
+                <div class="resource-right-article-content-pages-content">
+                  <template>
+                    <Page :total="getDataLength.num" :current="this.postData.pageindex" :page-size="5" @on-change="pageChange"></Page>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-if="false" class="resource-right-noarticle">
+            <div class="resource-right-noarticle-content">
+              <img src="../../../images/cases/case-noCases.png" alt="">
+              <p>没有找到符合条件的案例</p>
+            </div>
+          </div>
+          <div class="g-channel6">
+            <div class="case-channel6-content g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">开始申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-31服务资源-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    #include("../../../components/loading.html") #include("../../../components/footer.html")
+  </div>
+</body>
+
+</html>

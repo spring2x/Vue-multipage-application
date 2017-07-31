@@ -1,0 +1,172 @@
+@import '../../../styles/mixin.scss';
+
+.channel-two{
+    border-left: 6px solid #9DBD43!important;
+}
+.channel-two>a{
+    color: #9DBD43!important;
+}
+.channel-two>a:hover{
+    color: #FFF!important;
+}
+.channel-two{ 
+    background-image: url(../../../images/home/leftSideBarMeet.png);
+}
+
+.channel1{
+  background-image: url(../../../images/meeting/coupons/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px; 
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  height: 400px;
+  &-content{
+    width: 810px;
+    margin: 0 auto;
+    & .channel2-font{
+      float: left;
+      margin-top: 100px;
+      & h3{
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+    }
+    & img{
+      float: right;
+      margin-top: 40px;
+    }
+  }
+}
+
+.channel3{
+  padding: 50px 0px 50px 0px;
+  background-color: #f6f6f6;
+  &-content{
+    &>h3{
+      margin-top: 0px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+    & .channel3-img{
+      width: 780px;
+      margin: 0 auto;
+      overflow: auto;
+      & ul li{
+        float: left;
+        width: 204px;
+        text-align: center;
+        margin-right: 84px;
+        & p{
+          font-size: 12px;
+          color: #000000;
+          line-height: 20px;    
+        }
+        &:nth-child(3){
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+
+// 公司logo
+.e-channel9{
+  padding: 30px 0px 80px 0px;
+  & .e-channel9-content{
+    text-align: center;
+    &>h3{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    & .company-logo{
+      width: 1080px; 
+      margin: 0 auto;
+      overflow: auto;
+      & ul li{
+        height: 130px;
+        float: left;
+        & .basic{
+          display: inline-block;
+          width: 0;
+          height: 100%;
+          vertical-align: middle;
+        }
+      } 
+    }
+  }
+}
+
+/*试用*/
+.g-channel6{
+    padding: 180px 0px 0px 55px;
+    height: 600px;
+    background: #f6f6f6;
+    margin-bottom: -83px;
+}
+.g-channel6-imformation h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.g-channel6-line{
+    height: 1px;
+    width: 200px;
+    margin-bottom: 20px;
+    background: #dedede;
+}
+.g-channel6-phone span{
+    font-size: 16px;
+}
+.g-channel6-content{
+    position: relative;
+} 
+.g-channel6-tryout{
+    position: relative;
+    width: 375px;
+    box-shadow: 0 0 5px #cccccc;
+    position: absolute;
+    right: 140px;
+    top: -250px;
+    background: #fff;
+}
+.g-tryout-top{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+}

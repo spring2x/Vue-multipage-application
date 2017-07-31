@@ -1,0 +1,508 @@
+@import '../../../styles/mixin.scss';
+html,
+body {
+  height: 100%;
+}
+.i-content{
+  transition: all .5s cubic-bezier(0.895, 0.030, 0.685, 0.220);
+  &.show-footer{
+    @include transform(translateY(-544px));
+  }
+}
+.screen-one {
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner {
+  height: 330px;
+  width: 100%;
+  background: url(../../../images/meeting/weihuiyi/banner.jpg) center center no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+
+.banner-content {
+  padding-top: 70px;
+}
+
+.i-title-1 {
+  font-size: 38px;
+  color: #fff;
+}
+
+.i-title-2 {
+  font-size: 18px;
+  color: #fff;
+}
+
+.i-title-3 {
+  display: inline-block;
+  margin-top: 20px;
+  width: 170px;
+  height: 45px;
+  color: #fff;
+  background: #057BFA;
+  // border-radius: 5px;
+  line-height: 45px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  &:hover {
+    // background: #F3830C;
+    color: #fff;
+  }
+}
+
+.advantage {
+  height: 300px;
+  &-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #000000;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding: 70px 0;
+  }
+  &-content {
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+    min-width: 1080px;
+  }
+  &-item {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 30px;
+    font-size: 12px;
+    overflow: hidden;
+    dt {
+      width: 72px;
+      height: 72px;
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    dd {
+      font-size: 16px;
+      color: #000000;
+      line-height: 21px;
+      padding: 30px 0;
+      margin-left: 20px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    &1 {
+      animation-delay: .8s
+    }
+    &2 {
+      animation-delay: .6s
+    }
+    &3 {
+      animation-delay: .4s
+    }
+    &4 {
+      animation-delay: .2s
+    }
+  }
+}
+  
+.i-channel2 {
+  height: 100%;
+  background: #f6f6f6;
+  padding: 100px 0;
+  &-content {
+    width: 266px;
+    margin: auto;
+    position: relative;
+    z-index: 0;
+  }
+
+  &-center {
+    width: 266px;
+    height: 452px;
+    background: url(../../../images/meeting/weihuiyi/i-channel2-center.png) no-repeat;
+    background-size: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 9;
+  }
+  &-l-info {
+    width: 494px;
+    height: 136px;
+    background: #f6f6f6 url(../../../images/meeting/weihuiyi/i-channel2-l-info.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: -360px;
+    top: 34px;
+    z-index: 8;
+    // animation-delay: .2s
+  }
+  &-r-info {
+    width: 456px;
+    height: 136px;
+    background: #f6f6f6 url(../../../images/meeting/weihuiyi/i-channel2-r-info.png) no-repeat;
+    background-size: 100%;
+    position: absolute;
+    right: -400px;
+    top: 257px;
+    // animation-delay: .6s;
+    z-index: 6;
+  }
+  &-l-items {
+    overflow: hidden;
+    position: absolute;
+    width: 330px;
+    height: 250px;
+    left: -300px;
+    bottom: 0;
+    font-size: 0;
+    // animation-delay: .4s;
+    z-index: 7;
+  }
+  &-l-item {
+    width: 105px;
+    height: 105px;
+    margin: 0 30px 20px 30px;
+    display: inline-block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &-r-items {
+    overflow: hidden;
+    position: absolute;
+    width: 330px;
+    height: 250px;
+    right: -300px;
+    top: 0;
+    font-size: 0;
+    // animation-delay: .8s;
+    z-index: 5;
+  }
+  &-r-item {
+    width: 105px;
+    height: 105px;
+    margin: 0 30px 20px 30px;
+    display: inline-block;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.i-channel3{
+  padding: 100px 0;
+}
+
+.i-channel3-content {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 0;
+}
+
+.i-channel3-text {
+  position: absolute;
+  top: 30%;
+  float: left;
+  width: 350px;
+}
+
+.i-channel3-phone {
+  width: 900px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.i-channel3-phoneBg {
+  width: 305px;
+  height: 505px;
+  position: relative;
+  background: url(../../../images/meeting/weihuiyi/i-phone.png) no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  float: left;
+}
+
+.i-channel3-big-item {
+  width: 210px;
+  height: 378px;
+  overflow: hidden;
+  position: absolute;
+  top: 61px;
+  left: 42px;
+  z-index: 1;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.i-channel3-big-item.current {
+  opacity: 1;
+  z-index: 9;
+}
+
+.i-channel3-big-item1 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone1.png);
+}
+
+.i-channel3-big-item2 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone2.png);
+}
+
+.i-channel3-big-item3 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone3.png);
+}
+
+.i-channel3-big-item4 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone4.png);
+}
+
+.i-channel3-big-item5 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone5.png);
+}
+
+.i-channel3-big-item6 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone6.png);
+}
+
+.i-channel3-big-item7 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone7.png);
+}
+
+.i-channel3-big-item8 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone8.png);
+}
+
+.i-channel3-small {
+  width: 590px;
+  height: 294px;
+  float: left;
+  // margin-top: 105px;
+}
+
+.i-channel3-small h3{
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+.i-channel3-small a{
+  display: inline-block;
+  color: #fff;
+  background-color: #0AA1E5;
+  width: 120px;
+  height: 40px;
+  text-align: center; 
+  margin-top: 50px;   
+  line-height: 40px;
+  border-radius: 4px;
+}
+
+.i-channel3-small a:hover{
+  background-color: #0A8FCC;
+}
+
+.i-channel3-small-item {
+  width: 127px;
+  height: 127px;
+  float: left;
+  margin: 10px;
+  border-radius: 3px;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  position: relative;
+  cursor: pointer;
+}
+
+.i-channel3-small-item1 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small1.png);
+}
+
+.i-channel3-small-item2 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small2.png);
+}
+
+.i-channel3-small-item3 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small3.png);
+}
+
+.i-channel3-small-item4 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small4.png);
+}
+
+.i-channel3-small-item5 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small5.png);
+}
+
+.i-channel3-small-item6 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small6.png);
+}
+
+.i-channel3-small-item7 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small7.png);
+}
+
+.i-channel3-small-item8 {
+  background-image: url(../../../images/meeting/weihuiyi/i-phone-small8.png);
+}
+
+.i-channel3-small-item .twocode-bg {
+  position: relative;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.i-channel3-small-item.hover {
+  border: 2px solid #419bf9;
+}
+
+.i-channel3-small-item.hover .twocode-bg {
+  display: block;
+}
+
+.i-channel3-small-item .twocode {
+  display: block;
+  width: 98px;
+  height: 98px;
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+
+.i-channel3-small-item1 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode1.png);
+}
+
+.i-channel3-small-item2 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode2.png);
+}
+
+.i-channel3-small-item3 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode3.png);
+}
+
+.i-channel3-small-item4 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode4.png);
+}
+
+.i-channel3-small-item5 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode5.png);
+}
+
+.i-channel3-small-item6 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode6.png);
+}
+
+.i-channel3-small-item7 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode7.png);
+}
+
+.i-channel3-small-item8 .twocode {
+  background-image: url(../../../images/meeting/weihuiyi/i-twocode8.png);
+}
+
+.i-channel4{
+  padding: 0 0 100px;
+}
+.i-channel4-title {
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.i-channel4-content {
+  width: 1075px;
+  // height: 354px;
+  margin: auto;
+  padding: 46px 0 0 0;
+  
+}    
+
+.i-channel5 {
+  height: 550px;
+  background: #f6f6f6;
+  &-content {
+    position: relative;
+    padding-top: 100px;
+  }
+  &-imformation {
+    padding-left: 50px;
+  }
+  &-title {
+    margin-bottom: 20px;
+    font-size: 18px;
+  }
+  &-line {
+    height: 1px;
+    width: 200px;
+    margin-bottom: 20px;
+    background: #dedede;
+  }
+  &-tryout {
+    position: relative;
+    width: 375px;
+    box-shadow: 0 0 5px #cccccc;
+    position: absolute;
+    right: 140px;
+    top: -80px;
+    background: #fff;
+  }
+  .g-tryout-top {
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+  }
+}
+.footer-border{
+  margin-top: 0;
+}
+
+.company-logo{
+    width: 1080px; 
+    margin: 0 auto;
+    overflow: auto;
+}
+.company-logo .basic{
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+.company-logo ul li{
+    height: 130px;
+    float: left;
+}
+// 侧边栏导航样式
+.channel-two{
+    border-left: 6px solid #9DBD43!important;
+    /*background-color: #7FCEF2;*/
+}
+.channel-two>a{
+    color: #9DBD43!important;
+}
+.channel-two>a:hover{
+    color: #FFF!important;
+}
+.channel-two{ 
+    background-image: url(../../../images/home/leftSideBarMeet.png);
+}

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>会议微站建设-微官网怎么做-如何做微网站-31会议</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <div class="i-content" :class="isFooter ? 'show-footer' : ''">
+        <div class="i-content-right">
+          <div class="section" data-anchor="1">
+            <div class="screen-one">
+              <div class="banner">
+                <div class="banner-content">
+                  <h1 class="i-title-1">31微网站</h1>
+                  <h3 class="i-title-2">一站式微活动管理系统 做宣传 管现场 玩互动 引客户</h3>
+                  <a class="i-title-3" href="javascript:;" @click="() => {$root.$emit('toggleApplyModal', true, '开始申请试用', '123456789')}">马上申请</a>
+                  <!--<h1 class="i-title-1" :class="activePageIndex === 1 ? 'animated bounceInDown' : ''">31微网站</h1>-->
+                </div>
+              </div>
+              <div class="advantage">
+                <div class="advantage-title">
+                  适用于大会、活动、培训、展览、校招
+                </div>
+                <div class="advantage-content">
+                  <dl class="advantage-item advantage-item1">
+                    <dt>
+                      <img src="../../../images/meeting/weihuiyi/advantage1.png">
+                    </dt>
+                    <dd>10分钟
+                      <br>做好一个微站</dd>
+                  </dl>
+                  <dl class="advantage-item advantage-item2">
+                    <dt>
+                      <img src="../../../images/meeting/weihuiyi/advantage2.png">
+                    </dt>
+                    <dd>模板丰富
+                      <br>操作简单</dd>
+                  </dl>
+                  <dl class="advantage-item advantage-item3">
+                    <dt>
+                      <img src="../../../images/meeting/weihuiyi/advantage3.png">
+                    </dt>
+                    <dd>活动各环节
+                      <br>一键关联</dd>
+                  </dl>
+                  <dl class="advantage-item advantage-item4">
+                    <dt>
+                      <img src="../../../images/meeting/weihuiyi/advantage4.png">
+                    </dt>
+                    <dd>多项功能联动
+                      <br>后台数据互通</dd>
+                  </dl>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section i-channel2" data-anchor="2">
+            <div class="i-channel2-content">
+              <div class="i-channel2-center"></div>
+              <div class="i-channel2-l-info" :class="activePageIndex === 2 ? 'animated bounceInLeft' : ''">
+              </div>
+              <div class="i-channel2-r-info" :class="activePageIndex === 2 ? 'animated bounceInRight' : ''">
+              </div>
+              <div class="i-channel2-l-items" :class="activePageIndex === 2 ? 'animated bounceInLeft' : ''">
+                <div class="i-channel2-l-item i-channel2-l-item1">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-l-item1.png">
+                </div>
+                <div class="i-channel2-l-item i-channel2-l-item2">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-l-item2.png">
+                </div>
+                <div class="i-channel2-l-item i-channel2-l-item3">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-l-item3.png">
+                </div>
+                <div class="i-channel2-l-item i-channel2-l-item4">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-r-item4.png">
+                </div>
+              </div>
+              <div class="i-channel2-r-items" :class="activePageIndex === 2 ? 'animated bounceInRight' : ''">
+                <div class="i-channel2-r-item i-channel2-r-item1">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-r-item1.png">
+                </div>
+                <div class="i-channel2-r-item i-channel2-r-item2">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-r-item2.png">
+                </div>
+                <div class="i-channel2-r-item i-channel2-r-item3">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-r-item3.png">
+                </div>
+                <div class="i-channel2-r-item i-channel2-r-item4">
+                  <img src="../../../images/meeting/weihuiyi/i-channel2-r-item4.png">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section i-channel3" data-anchor="3">
+            <div class="i-channel3-phone">
+              <div class="i-channel3-phoneBg" :class="activePageIndex === 3 ? 'animated bounceInLeft' : ''">
+                <template v-for="index in 8">
+                  <div class="i-channel3-big-item" :class="'i-channel3-big-item' + index + (index === hoveSamllIndex ? ' current' : '')">
+                  </div>
+                </template>
+              </div>
+              <div class="i-channel3-small" :class="activePageIndex === 3 ? 'animated bounceInRight' : ''">
+                <h3>典型应用场景案例</h3>
+                <template v-for="index in 8">
+                  <div class="i-channel3-small-item" :class="'i-channel3-small-item' + index + (index === hoveSamllIndex ? ' hover' : '')" @mouseenter="hoverSmallImg(index)" @mouseleave="leaveSmallImg(index)">
+                    <div class="twocode-bg">
+                      <div class="twocode"></div>
+                    </div>
+                  </div>
+                </template>
+                <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">立即选用</a>
+              </div>
+            </div>
+          </div>
+          <div class="section i-channel4" data-anchor="4">     
+            <div class="i-channel4-content">
+              <h3 class="i-channel4-title">30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="section i-channel5" data-anchor="5">
+            <div class="i-channel5-content">
+              <div class="i-channel5-imformation" :class="activePageIndex === 5 ? 'animated bounceInLeft' : ''">
+                <h3 class="i-channel5-title">如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="i-channel5-line"></div>
+                <div class="i-channel5-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="i-channel5-tryout" :class="activePageIndex === 5 ? 'animated bounceInRight' : ''">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="396305106"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-top"></div>
+        </div>
+      </div>
+    </div>
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+
+</html>

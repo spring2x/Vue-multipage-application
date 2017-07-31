@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>iBeacon互动</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>iBeacon互动 摇周边</h1>
+              <h3>脱颖而出 聚集人气</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-摇周边-5815582')}">马上申请</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-font">
+                <h3>最流行的微信摇周边技术</h3>
+                <p>31摇周边 基于iBeacon实现</p>
+                <p>什么是iBeacon？</p>
+                <p>iBeacon是苹果公司开发的一种通过低功耗蓝牙技术进行的一个十分精确的微定位技术。iBeacon设备通过蓝牙信号广播设备ID，手机等终端进入iBeacon设备的信号范围，可以收到该设备的ID</p>
+              </div>
+              <img src="../../../images/interact/iBeacon/Group14.png" alt="">
+            </div>
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">
+              <div class="channel3-img">
+                <img src="../../../images/interact/iBeacon/Group15.png" alt="">
+                <div class="channel3-font">
+                  <h3>神奇的用户体验</h3>
+                  <p>31摇周边 主办方/参展商都在用它</p>
+                  <p>大量参会者聚集到您的展区，而不是竞争对手那里。参会</p>
+                  <p>者疯狂的摇动着手机，摇出您想让他们摇出的东西，并为</p>
+                  <p>此兴奋不已。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <div class="channel4-font">
+                <h3>简易的设置流程</h3>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/iBeacon/set-1.png" alt="">
+                    </div>
+                    <p>获得31摇周边硬件设备每只神器覆盖50-200平方米以上</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/iBeacon/set-2.png" alt="">
+                    </div>
+                    <p>无需配置 即开即用</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/iBeacon/set-3.png" alt="">
+                    </div>
+                    <p>将设备放在您期望的位置随时开始摇一摇</p>
+                  </div>
+                </div>  
+              </div>             
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-摇周边-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

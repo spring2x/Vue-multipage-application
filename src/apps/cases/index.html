@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>案例中心</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../components/header.html")
+    <div class="wrapper">
+      <div class="case-content">
+        <div class="case-content-right">
+          <div class="case-top-img">
+            <div class="case-top-ad">
+              <div class="col-md-12">
+                <h1 class="case-title-1 animate">科技驱动客户成功</h1>
+                <h3 class="case-title-2 animate">赢得30多万家客户信赖 成就100多万场大会/活动</h3>
+                <h3 class="case-title-2 animate">15个分支机构 服务辐射全国</h3>
+                <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">马上申请</a>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+          </div>
+          <div class="case-classify">
+            <div class="case-classify-content">
+              <div class="case-typeLists">
+                <span>类型</span>
+                <ul>
+                  <li @click="typeList('0')" :class="{caseChangeClick:choose.type.length===0}">不限</li>
+                  <li v-for="(item,index) in typeLists" :class="{caseChangeClick:choose.type.indexOf(item.id)!=-1}" @click="typeList(item)">{{item.name}}</li>
+                </ul>
+              </div>
+              <div class="case-dashed"></div>
+              <div class="case-industryLists">
+                <span>行业</span>
+                <ul>
+                  <li @click="industryList(0)" :class="{caseChangeClick:choose.industry.length===0}">不限</li>
+                  <li v-for="(item,index) in industryLists" :class="{caseChangeClick:choose.industry.indexOf(item.id)!=-1}" @click="industryList(item)">{{item.name}}</li>
+                </ul>
+              </div>
+              <div class="case-dashed"></div>
+              <div class="case-productLists">
+                <span>产品</span>
+                <ul>
+                  <li @click="productList(0)" :class="{caseChangeClick:choose.product.length===0}">不限</li>
+                  <li>会议云<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+                  <li>互动云<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+                  <li>营销云<span class="glyphicon glyphicon-triangle-bottom"></span></li>
+                </ul>
+                <div class="case-productLists-content">
+                  <div class="case-productLists1">
+                    <ul>
+                      <li v-for="(item,index) in productLists1" v-bind:class="{caseChangeClick:choose.product.indexOf(item.id)!=-1}" @click="productList(item)">{{item.name}}</li>
+                    </ul>
+                  </div>
+                  <div class="case-productLists1">
+                    <ul>
+                      <li v-for="(item,index) in productLists2" v-bind:class="{caseChangeClick:choose.product.indexOf(item.id)!=-1}" @click="productList(item)">{{item.name}}</li>
+                    </ul>
+                  </div>
+                  <div class="case-productLists1">
+                    <ul>
+                      <li v-for="(item,index) in productLists3" v-bind:class="{caseChangeClick:choose.product.indexOf(item.id)!=-1}" @click="productList(item)">{{item.name}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="case-dashed"></div>
+              <div class="case-cityLists">
+                <span>城市</span>
+                <ul>
+                  <li @click="cityList(0)" :class="{caseChangeClick:choose.city.length===0}">不限</li>
+                  <li v-for="(item,index) in cityLists" v-bind:class="{caseChangeClick:choose.city.indexOf(item.id)!=-1}" @click="cityList(item)">{{item.name}}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="case-change">
+            <font>已选条件</font>
+            <ul>
+              <li v-for="(item,index) in chooseShow.type" v-if="chooseShow.type.length!=0 ">
+                <font>{{item}}</font><span @click="deleteTypeList(index)"></span></li>
+              <li v-for="(item,index) in chooseShow.industry" v-if="chooseShow.industry.length!=0 ">
+                <font>{{item}}</font><span @click="deleteIndustryList(index)"></span></li>
+              <li v-for="(item,index) in chooseShow.product" v-if="chooseShow.product.length!=0 ">
+                <font>{{item}}</font><span @click="deleteProductList(index)"></span></li>
+              <li v-for="(item,index) in chooseShow.city" v-if="chooseShow.city.length!=0 ">
+                <font>{{item}}</font><span @click="deleteCityList(index)"></span></li>
+            </ul>
+            <span @click="emptyList()"><img src="../../images/cases/case-empty.png" alt="">清空条件</span>
+          </div>
+          <div v-if="getDataLength.num!=0" class="case-article">
+            <div class="case-article-content">
+              <div class="case-article-list" v-for="item in getData">
+                <div class="case-article-listImg">
+                  <a v-bind:href='"/newslist/article/"+item.ArticleId+"/"'><img :src="item.FilePath" alt=""></a>
+                </div>
+                <div class="case-article-text">
+                  <a v-bind:href='"/newslist/article/"+item.ArticleId+"/"'><h3>{{item.Title}}</h3></a>
+                  <p>{{item.PublishDate}}</p>
+                  <ul v-if="item.Industry!=''&&item.EventType.length>0&&item.City.length>0">
+                    <li>{{item.EventType[0]}}</li>
+                    <li>{{item.Industry}}</li>
+                    <li>{{item.City[0]}}</li>
+                  </ul>
+                  <font>{{item.Summary}}</font>
+                </div>
+              </div>
+              <!--<div class="case-article-list">
+                        <div class="case-article-listImg"><a href="javascript:;"><img src="http://file.31huiyi.com/225x137/crop_true/%2fUploads%2fFiles%2f2017%2f06%2f07%2f324325153%2f636324334016393975.jpg " alt=""></a></div>
+                        <div class="case-article-text">
+                            <a href="javascript:;"><h3>案例精选</h3></a>
+                            <p>2017-03-30</p>
+                            <ul><li>国际大会</li><li>第三方</li><li>上海</li></ul>
+                            <font>中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                                中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                            </font>
+                        </div>
+                    </div>
+                    <div class="case-article-list">
+                        <div class="case-article-listImg"><a href="javascript:;"><img src="http://file.31huiyi.com/225x137/crop_true/%2fUploads%2fFiles%2f2017%2f06%2f07%2f324325153%2f636324334016393975.jpg " alt=""></a></div>
+                        <div class="case-article-text">
+                            <a href="javascript:;"><h3>案例精选</h3></a>
+                            <p>2017-03-30</p>
+                            <ul><li>国际大会</li><li>第三方</li><li>上海</li></ul>
+                            <font>中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                                中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                            </font>
+                        </div>
+                    </div>
+                    <div class="case-article-list">
+                        <div class="case-article-listImg"><a href="javascript:;"><img src="http://file.31huiyi.com/225x137/crop_true/%2fUploads%2fFiles%2f2017%2f06%2f07%2f324325153%2f636324334016393975.jpg " alt=""></a></div>
+                        <div class="case-article-text">
+                            <a href="javascript:;"><h3>案例精选</h3></a>
+                            <p>2017-03-30</p>
+                            <ul><li>国际大会</li><li>第三方</li><li>上海</li></ul>
+                            <font>中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                                中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                            </font>
+                        </div>
+                    </div>
+                    <div class="case-article-list">
+                        <div class="case-article-listImg"><a href="javascript:;"><img src="http://file.31huiyi.com/225x137/crop_true/%2fUploads%2fFiles%2f2017%2f06%2f07%2f324325153%2f636324334016393975.jpg " alt=""></a></div>
+                        <div class="case-article-text">
+                            <a href="javascript:;"><h3>案例精选</h3></a>
+                            <p>2017-03-30</p>
+                            <ul><li>国际大会</li><li>第三方</li><li>上海</li></ul>
+                            <font>中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                                中国的会展旅游业正处于转型升级的重要历史发展阶段，如何转型，如何升级，转型升级之前与之后的差异到底在哪里，等等，是我最近一短时间思考的一个重要问题。
+                            </font>
+                        </div>
+                    </div>-->
+              <div class="case-pages">
+                <div class="case-pages-content">
+                  <template>
+                    <Page :total="getDataLength.num" :current="this.postData.pageindex" :page-size="5" @on-change="pageChange"></Page>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-if="getDataLength.num==0" class="case-none">
+            <div class="case-none-content">
+              <img src="../../images/cases/case-noCases.png" alt="">
+              <p>没有找到符合条件的案例</p>
+            </div>
+          </div>
+          <div class="g-channel6">
+            <div class="case-channel6-content g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">开始申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="396305106"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    #include("../../components/loading.html") #include("../../components/footer.html")
+  </div>
+</body>
+
+</html>

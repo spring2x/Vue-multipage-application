@@ -1,0 +1,361 @@
+@import '../../../styles/mixin.scss';
+
+.channel1{
+  background-image: url(../../../images/othersolution/dealer/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px; 
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  height: 550px;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    color: #000000;
+    & .channel2-font{
+      float: left;
+      margin-top: 140px;
+      & p{
+        position: relative;
+        color: #333333;
+        font-size: 18px;
+        margin-bottom: 0px;
+        line-height: 30px;
+      }
+      & span{
+        position: absolute;
+        display: inline-block;
+        left: -15px;
+        top: 15px;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background-color: #C5CBD0;
+      }
+    }
+    & img{
+      float: right;
+    }
+  }
+}
+
+.channel4-font,
+.channel5-font,
+.channel6-font,
+.channel7-font,
+.channel8-font,
+.channel9-font{
+  & h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+  }
+  & p{
+    position: relative;
+    color: #333333;
+    font-size: 12px;
+    line-height: 30px;
+    margin-bottom: 0px;
+  }
+}
+
+.channel3{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    margin: 0 auto;
+    text-align: center;
+    & h3{
+      margin-top: 0px;
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    & img{
+      width: 100%;
+    }
+  }
+}
+
+.channel4{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    &>h3{
+      margin-top: 0px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 50px;
+    }
+    & .channel4-img{
+      & .channel4-font{
+        float: left;
+        margin-top: 40px;
+      }
+      & img{
+        float: right;
+      }
+    }
+  }
+}
+
+.channel5{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    position: relative;
+    & img{
+      float: left;
+    }
+    & .channel5-font{
+      position: absolute;
+      right: 0px;
+      float: right;
+      top: 60px;
+    }
+  }
+}
+
+.channel6{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    & .channel6-font{
+      float: left;
+      margin-top: 80px;
+    }
+    & .channel6-img{
+      float: right;
+    }
+  }
+}
+
+.channel7{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    & .channel7-font{
+      float: right;
+      margin-top: 60px;
+    }
+    & .channel7-img{
+      float: left;
+    }
+  }
+}
+
+.channel8{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    & .channel8-font{
+      float: left;
+      margin-top: 60px;
+    }
+    & .channel8-img{
+      float: right;
+    }
+  }
+}
+
+.channel9{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1060px;
+    margin: 0 auto;
+    overflow: auto;
+    & img{
+      float: left;
+    }
+    & .channel9-font{
+      float: right;
+      margin-top: 60px;
+    }
+  }
+}
+
+.new-case{
+  padding: 50px 0px 50px 0px;
+  & .cooperative{
+    width: 1130px;
+    margin: 0 auto;
+    & .new-case-header{
+      color: #000000;
+      font-size: 30px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+    & .new-case-body{
+      & .new-case-block{
+        float: left;
+        padding: 0 40px 40px 0;
+        &:nth-child(3),
+        &:nth-child(6){
+          padding: 0 0px 40px 0;
+        }
+        & .inner{
+          border: 1px solid #cecece;
+          background-color: #ffffff;
+          width: 350px;
+          & .case_picture{
+            & img{
+              width: 100%;
+            }
+          }
+          & h3{
+            font-size: 18px;
+            margin: 15px 0px 30px 0px;
+            padding: 0px 10px 0px 10px;
+            height: 30px; 
+          }
+        }
+      }
+      
+    }
+  }
+}
+
+@media screen and (max-width:1340px){
+  .new-case{
+    & .cooperative{
+      width: 995px;
+      & .new-case-body{
+        & .new-case-block{
+          & .inner{
+            width: 295px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:1500px) and (max-width:1920px){
+  .channel2,
+  .channel3,
+  .channel4,
+  .channel5,
+  .channel6,
+  .channel7,
+  .channel8,
+  .channel9{
+    &-content{
+      width: 1240px;
+    }
+  }
+}
+
+// 公司logo
+.e-channel9{
+  padding: 30px 0px 80px 0px;
+  & .e-channel9-content{
+    text-align: center;
+    &>h3{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    & .company-logo{
+      width: 1080px; 
+      margin: 0 auto;
+      overflow: auto;
+      & ul li{
+        height: 130px;
+        float: left;
+        & .basic{
+          display: inline-block;
+          width: 0;
+          height: 100%;
+          vertical-align: middle;
+        }
+      } 
+    }
+  }
+}
+
+/*试用*/
+.g-channel6{
+    padding: 180px 0px 0px 55px;
+    height: 600px;
+    background: #f6f6f6;
+    margin-bottom: -83px;
+}
+.g-channel6-imformation h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.g-channel6-line{
+    height: 1px;
+    width: 200px;
+    margin-bottom: 20px;
+    background: #dedede;
+}
+.g-channel6-phone span{
+    font-size: 16px;
+}
+.g-channel6-content{
+    position: relative;
+} 
+.g-channel6-tryout{
+    position: relative;
+    width: 375px;
+    box-shadow: 0 0 5px #cccccc;
+    position: absolute;
+    right: 140px;
+    top: -250px;
+    background: #fff;
+}
+.g-tryout-top{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+}

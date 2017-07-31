@@ -1,0 +1,146 @@
+@import '../../styles/mixin.scss';
+
+.channel1{
+  background-image: url(../../images/partner/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px; 
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1054px;
+    margin: 0 auto;
+    color: #333333;  
+    &>h3{
+      font-size: 20px;  
+      margin-top: 0px;  
+      font-weight: bold;
+      margin-bottom: 30px;
+      & span{
+        font-size: 14px;
+        font-weight: lighter;
+      }
+    }
+    & .channel2-font{
+      overflow: auto;
+      text-align: center;
+      & ul li{
+        width: 256px;
+        height: 413px;
+        background: #F3F3F3;
+        float: left;
+        margin-right: 10px;
+        padding: 30px 20px 20px 20px;
+        &:nth-child(4){
+          margin-right: 0px;
+        }
+        & h3{
+          
+          font-weight: bold;
+          font-size: 16px;
+        }
+        & p{
+          height: 170px;
+          text-align: left;
+          line-height: 26px;
+          font-size: 12px;
+        }
+        & a{
+          display: inline-block;
+          height: 36px;
+          width: 160px;
+          text-align: center;
+          line-height: 36px;
+          font-size: 18px;
+          color: #fff;
+          background-color: #0AA1E5;
+          text-decoration: none;
+          &:visited{
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.channel3{
+  padding-bottom: 250px;
+}
+
+/*试用*/
+.partner{
+    height: 730px; 
+    background: #f6f6f6;
+    margin-bottom: -83px;
+}
+.partner-imformation{
+  position: relative;
+  top: 590px;
+  text-align: center;
+}
+.partner-imformation h3{
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+.partner-line{
+    height: 1px;
+    margin: 0 auto;
+    width: 300px;
+    margin-bottom: 20px;
+    background: #dedede;
+}
+.partner-phone span{
+    font-size: 16px;
+}
+.partner-content{
+    position: relative;
+    width: 750px;
+    margin: 0 auto;
+} 
+.partner-tryout{
+    position: absolute;
+    width: 100%; 
+    top: -150px; 
+    box-shadow: 0 0 5px #cccccc;
+    background: #fff;
+}
+.g-tryout-top{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+}

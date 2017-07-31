@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>31会议合作案例-31会议网</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+    <!--#####start#####-->
+    <div class="newslist">
+      <div class="newslist-content">
+        <div class="top-img">
+          <div class="top-ad">
+            <div class="col-md-12">
+              <h1 class="title-1 animate">行业报告</h1>
+              <h3>行业最新统计调研数据实时共享 助您分析决策</h3>
+              <!--<h3 class="w-title-2 animate">专为会议/活动打造专业网站，快速上手10分钟即可完成建站</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true)}">马上申请</a>-->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <div class="bread-nav" v-html="newsCrumbs.data">
+          {{newsCrumbs.data}}
+        </div>
+        
+        <div class="news-list">
+
+          <div v-if="getDataLength.num!=0" class="case-article">
+            <div class="case-article-content">
+              <div class="case-article-list" v-for="item in getData">
+                <div class="case-article-listImg">
+                  <a v-bind:href='"/newslist_2017/article/"+item.ArticleId+"/"'><img :src="item.FilePath" alt=""></a>
+                </div>
+                <div class="case-article-text">
+                  <a v-bind:href='"/newslist_2017/article/"+item.ArticleId+"/"'><h3>{{item.Title}}</h3></a>
+                  <p><span>{{item.PublishDate}}</span><span>{{item.SiteFrom}}</span></p>            
+                  <font>{{item.Summary}}</font>
+                </div>
+              </div>
+              <div class="case-pages">
+                <div class="case-pages-content">
+                  <template>
+                    <Page :total="getDataLength.num" :page-size="10" @on-change="pageChange"></Page>
+                  </template>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hotlists">
+            <div class="hotlists-content">
+              <div class="hotlists-header">
+                <span>热门文章</span>
+              </div>
+              <div class="hotlists-title">
+                <ul>
+                  <li v-for="(item,index) in hotLists"><span>{{index+1}}</span><a v-bind:href="item.Url">{{item.Title}}</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="g-channel6">
+          <div class="g-channel6-content">
+            <div class="g-channel6-imformation">
+              <h3>如果您需要进一步了解信息，请致电我们！</h3>
+              <div class="g-channel6-line"></div>
+              <div class="g-channel6-phone">
+                <img src="../../../images/custom/g-phone.png" alt="">
+                <span>400-690-3131</span>
+              </div>
+            </div>
+            <div class="g-channel6-tryout">
+              <div class="g-tryout-top">欢迎申请试用</div>
+              <div class="g-tryout-input">
+                <apply-form from="落地页-新闻资讯-行业报告-5815582"></apply-form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!--#####end#####-->
+    </div>
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

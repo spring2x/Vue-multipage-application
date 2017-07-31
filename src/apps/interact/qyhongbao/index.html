@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>现金红包</title>
+</head>
+
+<body>
+  <div id="app">
+    #include("../../../components/header.html")
+    <div class="wrapper">
+      <!--#####start#####-->
+      <div class="tutorials">
+        <div class="tutorials-content">
+          <div class="channel1">
+            <div class="channel1-content">
+              <h1>抢红包</h1>
+              <h3>吸粉 • 互动 • 有趣味 • 提升品牌</h3>
+              <a href="javascript:;" @click="function(){$root.$emit('toggleApplyModal', true,'欢迎马上申请','落地页-现金红包-5815582')}">马上申请</a>
+            </div>
+          </div>
+          
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-font">
+                <h3>31定点摇一摇红包—品牌传播神器</h3>
+                <p>适用场景：品牌营销等活动，通过定点摇一摇红包，获得更多的品牌曝光，引发粉丝转发，品牌更多关注，粉丝增长迅速
+红包形式：后台设置好定时摇红包，用户仅需打开图文页即可参与，中奖的红包金额存入微信钱包余额。</p>
+              </div>
+              <div class="row">
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/yao-1.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/1.png" alt="">
+                    </div>
+                    <p>后台设置</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/yao-2.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/2.png" alt="">
+                    </div>
+                    <p>用户在页面中报名参与</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/yao-3.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/3.png" alt="">
+                    </div>
+                    <p>定点时刻摇到红包</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/yao-4.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/4.png" alt="">
+                    </div>
+                    <p>定点时刻摇到红包</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="channel3">
+            <div class="channel3-content">
+                <div class="channel3-font">
+                  <h3>31微信墙红包—现场互动，奖金现领</h3>
+                  <p>31微信墙红包介绍：31微信墙红包，是结合31微信墙滚动抽奖/摇一摇抽奖发放的一种红包形式。进入31微信墙抽奖，中奖后就可获得后台发送的红包。</p>
+                  <p>适用场景：年会/活动/发布会等场景，现场互动中的抽奖发红包等环节。</p>
+                  <p>红包形式：微信用户关注公众账号，后台设置红包发放规则，创建微信墙，开通滚动抽奖/摇一摇抽奖。</p>
+                </div>
+                <div class="channel3-img">
+                  <div class="imgcontent channel3-img-left">
+                    <img src="../../../images/interact/qyhongbao/wxhb-1.png" alt="">
+                    <div class="channel3-foot">
+                      <p><span></span>中奖用户收到红包</p>
+                    </div>
+                  </div>
+                  <div class="imgcontent channel3-img-middle">
+                    <div class="first">
+                      <p class="text">现场大屏展示中奖名单</p>
+                      <p><span class="glyphicon glyphicon-menu-right"></span></p>
+                    </div>
+                    <div class="first second">
+                      <p class="text">后台给中奖名单发红包</p>
+                      <p><span class="glyphicon glyphicon-menu-right"></span></p>
+                    </div>
+                  </div>
+                  <div class="imgcontent channel3-img-right">
+                    <img src="../../../images/interact/qyhongbao/wxhb-2.png" alt="">
+                  </div>
+                </div>
+                
+            </div>
+          </div>
+
+          <div class="channel2">
+            <div class="channel2-content">
+              <div class="channel2-font">
+                <h3>普通粉丝红包——定向发送</h3>
+                <p>场景介绍：在年会/活动/现场等场景中，通过微信公号为粉丝/会员/客户/员工，以现金红包形式发放福利，也可作为公号的运营手段，提升关注度。<br>
+                  红包形式：微信用户关注公众账号，后台设置红包发放规则，可配置“随机金额”或“固定金额”，可选择“批量发放”<br>
+                  或“按条件发放”，单个红包最大金额为200元。</p>
+              </div>
+              <div class="row">
+                  <div class="col-md-3 firstImg">
+                    <div class="channel2-font-img firstImgheight">
+                      <img src="../../../images/interact/qyhongbao/fshb-1.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/1.png" alt="">
+                    </div>
+                    <p>红包形式 红包发放规则</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/fshb-2.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/2.png" alt="">
+                    </div>
+                    <p>公号内收到红包</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/fshb-3.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/3.png" alt="">
+                    </div>
+                    <p>打开红包领现金</p>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="channel2-font-img">
+                      <img src="../../../images/interact/qyhongbao/fshb-4.png" alt="">
+                    </div>
+                    <div class="channel2-font-num">
+                      <img src="../../../images/interact/qyhongbao/4.png" alt="">
+                    </div>
+                    <p>现金存入钱包</p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+          <div class="channel4">
+            <div class="channel4-content">
+              <div class="channel4-header">
+                <h3>经典案例</h3>
+              </div>
+              <div class="channel4-img">
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/qyhongbao/zwys-1.png" alt="">
+                    </div>
+                    <p>用户在页面中报名参与</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/qyhongbao/zwys-2.png" alt="">
+                    </div>
+                    <p>定点时刻摇到红包</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel4-font-img">
+                      <img src="../../../images/interact/qyhongbao/zwys-3.png" alt="">
+                    </div>
+                    <p>会后效果</p>
+                  </div>
+                </div>
+              </div>
+              <div class="channel4-font">
+                <h3>物医生2016钻石年会（定点摇一摇红包）</h3>
+                <p>发展理念为植物护肤的植物医生，2016年1月13日举行了以“蜕变新生”为主题的“植物医生2016钻石年会”。</p>
+                <p>为回馈客户长期以来的支持，采用31定点摇一摇红包功能，成功转化了千余个潜在客户。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="channel5">
+            <div class="channel5-content">
+              <div class="channel5-img">
+                <div class="row">
+                  <div class="col-md-4 first">
+                    <div class="channel5-font-img">
+                      <img src="../../../images/interact/qyhongbao/baiwei-1.png" alt="">
+                    </div>
+                    <p><span></span>现场大屏 展示中奖名单</p>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel5-font-img">
+                      <img src="../../../images/interact/qyhongbao/baiwei-2.png" alt="">
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="channel5-font-img">
+                      <img src="../../../images/interact/qyhongbao/baiwei-3.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="channel5-font">
+                <h3>百威2016新年演讲（31微信墙红包）</h3>
+                <p>百威2016年 Club Party新年巡演活动，在31微信墙互动的基础上，加入31红包互动，现场气氛异常火爆，</p>
+                <p>参与者在互动的同时接收到现金红包。</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section e-channel9">
+            <div class="e-channel9-content">
+              <h3>30万家企业/机构的选择</h3>
+              <div class="company-logo">
+                <ul>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo1.jpg" title="阿里巴巴">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo2.jpg" title="腾讯">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo3.jpg" title="百度">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo4.jpg" title="联想">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo5.jpg" title="华为">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo6.jpg" title="惠普">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo7.jpg" title="EMERSON">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo8.jpg" title="中国电信">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo9.jpg" title="宜信">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo10.jpg" title="东方证券">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo11.jpg" title="招商银行">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo12.jpg" title="第一财经">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo13.jpg" title="德勤">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo14.jpg" title="绿地集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo15.jpg" title="万达集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo16.jpg" title="新东方">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo17.jpg" title="博世">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo18.jpg" title="联合利华">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo19.jpg" title="星巴克">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo20.jpg" title="雅诗兰黛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo21.jpg" title="苏宁易购">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo22.jpg" title="格力">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo23.jpg" title="海尔">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo24.jpg" title="Reebok">
+                  </li>
+
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo25.jpg" title="蒙牛">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo26.jpg" title="贝因美集团">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo27.jpg" title="周大福">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo28.jpg" title="一汽大众">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo29.jpg" title="英菲尼迪">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo30.jpg" title="企源">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo31.jpg" title="黑马会">
+                  </li>
+                  <li>
+                    <span class="basic"></span>
+                    <img src="../../../images/meeting/website/meet-logo32.jpg" title="吴晓波频道">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="g-channel6">
+            <div class="g-channel6-content">
+              <div class="g-channel6-imformation">
+                <h3>如果您需要进一步了解信息，请致电我们！</h3>
+                <div class="g-channel6-line"></div>
+                <div class="g-channel6-phone">
+                  <img src="../../../images/custom/g-phone.png" alt="">
+                  <span>400-690-3131</span>
+                </div>
+              </div>
+              <div class="g-channel6-tryout">
+                <div class="g-tryout-top">欢迎申请试用</div>
+                <div class="g-tryout-input">
+                  <apply-form from="落地页-服务体系-5815582"></apply-form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <!--#####end#####-->
+    </div>
+
+
+    #include("../../../components/footer.html")
+    #include("../../../components/loading.html")
+  </div>
+</body>
+</html>

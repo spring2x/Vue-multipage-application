@@ -1,0 +1,297 @@
+@import '../../../styles/mixin.scss';
+
+.channel-two{
+    border-left: 6px solid #9DBD43!important;
+}
+.channel-two>a{
+    color: #9DBD43!important;
+}
+.channel-two>a:hover{
+    color: #FFF!important;
+}
+.channel-two{ 
+    background-image: url(../../../images/home/leftSideBarMeet.png);
+}
+
+.channel1{
+  background-image: url(../../../images/meeting/houses/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 330px;
+  & .channel1-content{
+    padding-top: 60px;
+    text-align: center;
+    h1{
+      font-size: 38px; 
+      color: #FFF;
+    }
+    h3{
+      font-size: 18px;
+      color: #FFF;
+    }
+    a{
+      display: inline-block;
+      margin-top: 20px;
+      width: 170px;
+      height: 45px;
+      color: #fff;
+      background: #057BFA;
+      line-height: 45px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    a:hover{
+      color: #FFF;
+    }
+  }
+}
+
+.channel2{
+  height: 500px;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1016px;
+    margin: 0 auto;
+    &>h3{
+      text-align: center;
+      margin-top: 0px;
+      font-size: 30px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+    & .channel2-img{
+      & ul li{
+        background-image: url(../../../images/meeting/houses/channel2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 312px;
+        height: 331px;
+        float: left;
+        margin-right: 40px;
+        padding: 25px 0px 0px 20px;
+        &:nth-child(3){
+          margin-right: 0px;
+        }
+        & h3{
+          color: #000000;
+          font-size: 18px;
+          margin-top: 0px;
+          margin-bottom: 50px;
+        }
+        & p{
+          position: relative;
+          font-size: 12px;
+          margin-left: 15px;
+          line-height: 30px;
+          margin-bottom: 0px;
+          & span{
+            position: absolute;
+            display: inline-block;
+            left: -15px;
+            top: 15px;
+            height: 4px;
+            width: 4px;
+            border-radius: 50%;
+            background-color: #C5CBD0;
+
+          }
+        }
+      }
+    }
+  }
+}
+
+.channel3-font,
+.channel4-font,
+.channel5-font,
+.channel6-font{
+  & h3{
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    
+  }
+  & p{
+    position: relative;
+    font-size: 14px;
+    margin-left: 15px;
+    line-height: 30px;
+    margin-bottom: 0px;
+    & span{
+      position: absolute;
+      display: inline-block;
+      left: -15px;
+      top: 14px;
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background-color: #C5CBD0;
+    }
+  }
+}
+
+.channel3{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1040px;
+    margin: 0 auto;
+    &>h3{
+      margin-top: 0px;
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 60px;
+      font-weight: bold;
+    }
+    & .channel3-img{
+      overflow: auto;
+      & .channel3-font{
+        float: left;
+      }
+      & img{
+        float: right;
+      }
+    }
+  }
+}
+
+.channel4{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1040px;
+    margin: 0 auto;
+    overflow: auto;
+    & img{
+      float: left;
+    }
+    & .channel4-font{
+      margin-top: 50px;
+      float: right;
+    }
+  }
+}
+
+.channel5{
+  background-color: #f6f6f6;
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1040px;
+    margin: 0 auto;
+    overflow: auto;
+    & img{
+      float: right;
+    }
+    & .channel5-font{
+      margin-top: 40px;
+      float: left;
+    }
+  }
+}
+
+.channel6{
+  padding: 50px 0px 50px 0px;
+  &-content{
+    width: 1040px;
+    margin: 0 auto;
+    overflow: auto;
+    & img{
+      float: left;
+    }
+    & .channel6-font{
+      margin-top: 30px;
+      float: right;
+    }
+  }
+}
+
+@media screen and (min-width:1500px) and (max-width:1920px){
+  .channel2{
+    &-content{
+      width: 1216px;
+      & .channel2-img{
+        & ul li{
+          margin-right: 140px;
+        }
+      }
+    }
+  }
+  .channel3,
+  .channel4,
+  .channel5,
+  .channel6{
+    &-content{
+      width: 1240px;
+    }
+  }
+}
+
+// 公司logo
+.e-channel9{
+  padding: 30px 0px 80px 0px;
+  & .e-channel9-content{
+    text-align: center;
+    &>h3{
+      font-size: 30px;
+      font-weight: bold;
+    }
+    & .company-logo{
+      width: 1080px; 
+      margin: 0 auto;
+      overflow: auto;
+      & ul li{
+        height: 130px;
+        float: left;
+        & .basic{
+          display: inline-block;
+          width: 0;
+          height: 100%;
+          vertical-align: middle;
+        }
+      } 
+    }
+  }
+}
+
+/*试用*/
+.g-channel6{
+    padding: 180px 0px 0px 55px;
+    height: 600px;
+    background: #f6f6f6;
+    margin-bottom: -83px;
+}
+.g-channel6-imformation h3{
+    font-weight: 600;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+.g-channel6-line{
+    height: 1px;
+    width: 200px;
+    margin-bottom: 20px;
+    background: #dedede;
+}
+.g-channel6-phone span{
+    font-size: 16px;
+}
+.g-channel6-content{
+    position: relative;
+} 
+.g-channel6-tryout{
+    position: relative;
+    width: 375px;
+    box-shadow: 0 0 5px #cccccc;
+    position: absolute;
+    right: 140px;
+    top: -250px;
+    background: #fff;
+}
+.g-tryout-top{
+    text-align: center;
+    line-height: 60px;
+    height: 60px;
+    font-size: 22px;
+    color: #fff;
+    background: #07a1ff;
+}
