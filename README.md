@@ -13,3 +13,6 @@ webpack多页打包集成vue开发环境
 *  npm install
 *  npm start 启动服务 localhost:8888/static/apps/home开发调试
 *  npm run build 打包发布 localhost:8888/home预览
+
+  [1]: http://www.31huiyi.com/
+  [2]: http://www.31huiyi.com/
