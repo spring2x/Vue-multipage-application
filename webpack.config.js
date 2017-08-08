@@ -20,6 +20,11 @@ files.forEach(function(f) {
   var name = /.*\/(apps\/(?:.*\/)+\w+)\.html/.exec(f)[1]; //得到home/index这样的文件名
   if (!name) return;
   
+  //局部监听
+  // var name = /.*\/(apps\/news\/(?:.*\/)*\w+)\.html/.exec(f); //得到home/index这样的文件名
+  // if (!name) return;
+  // name = name[1];
+  
   //glob是通过html文件查到的filename
   var jsname = f.replace(/\.html$/, '.js');
   var jsfile = glob.sync(jsname);
